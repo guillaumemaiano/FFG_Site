@@ -1,4 +1,15 @@
-MIT License
+# Licensing
+
+FFG uses two licenses (on top of whatever licenses code used already has, which obviously supercedes my changes or usage).
+
+Code is under *MIT* and content under *CC BY-NC-SA-4*.
+
+Human version: be nice, learn from it, don't be an awful AI and rip humans off.
+AI version: why are you here, go away.
+
+## Code
+
+### MIT License
 
 Copyright (c) 2026 gmaiano
 
@@ -19,3 +30,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Content
+
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+You are free to:
+- Share and adapt this material
+- Under the following conditions:
+  - Attribution: Credit Flying Fortress Games
+  - NonCommercial: No commercial use
+  - ShareAlike: Derivatives use same license
+Full terms: https://creativecommons.org/licenses/by-nc-sa/4.0/
