@@ -2,6 +2,7 @@ baseURL = 'https://www.flyingfortressgames.com/'
 locale = 'en-us'
 title = 'Flying Fortress Games'
 enableRobotsTXT = true
+theme = 'IndustrialOptimism'
 
 defaultContentLanguage = 'en'
 
@@ -13,7 +14,9 @@ weight = 1
 title = 'Flying Fortress Games'
 weight = 2
 
-theme = "IndustrialOptimism"
 [cascade]
   [cascade.params]
     author = "Flying Fortress Games"
+
+#[outputs]
+#home = ['HTML', 'RSS']

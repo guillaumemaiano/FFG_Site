@@ -1,0 +1,4 @@
+<h1>{{ .Site.Title }}</h1>
+{{ range first 5 .Site.RegularPages }}
+  <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+{{ end }}
