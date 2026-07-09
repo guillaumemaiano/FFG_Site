@@ -48,3 +48,7 @@ REX in progress.
 ### Deployment
 
 (...)
+
+### Future work
+
+Signed commits with GPG
