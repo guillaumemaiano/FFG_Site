@@ -1,5 +1,4 @@
-baseURL = 'https://www.flyingfortressgames.com'
-#baseURL = 'https://guillaumemaiano.github.io/FFG_Site'
+baseURL = 'https://www.flyingfortressgames.com/'
 locale = 'en-us'
 title = 'Flying Fortress Games'
 enableRobotsTXT = true
