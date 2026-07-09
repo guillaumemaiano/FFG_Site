@@ -2,6 +2,8 @@
 title: "Taxi and Takeoff"
 date: 2026-07-01
 journal_number : 0
+tags: ["vlog"]
+youtube_id: "xqVj_Ib4e-o"
 ---
 
 # Welcome to Flying Fortress Games.

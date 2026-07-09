@@ -3,6 +3,8 @@ date = '2026-07-08T20:33:20+02:00'
 draft = false
 title = 'Visual Language and Web Design'
 journal_number = 1
+tags = ["vlog"]
+youtube_id = "VIDEO_ID_HERE"
 +++
 # Deriving a Visual Language: How Flying Fortress Games Approached Website Design
 
