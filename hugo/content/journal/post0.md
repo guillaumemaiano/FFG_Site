@@ -1,6 +1,7 @@
 ---
-title: "Post 0 — Taxi and Takeoff"
+title: "Taxi and Takeoff"
 date: 2026-07-01
+journal_number : 0
 ---
 
 # Welcome to Flying Fortress Games.
@@ -14,9 +15,3 @@ We'll build checklists. We'll write REXes.
 Board and strap in.
 
 We're rolling.
-
----
-
-© 2026 Flying Fortress Games. Content licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-Code licensed under [MIT](LICENSE).
-Attribution: "Taxi and Takeoff — Flying Fortress Games"

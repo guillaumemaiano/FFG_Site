@@ -2,6 +2,7 @@
 date = '2026-07-08T20:33:20+02:00'
 draft = false
 title = 'Visual Language and Web Design'
+journal_number = 1
 +++
 # Deriving a Visual Language: How Flying Fortress Games Approached Website Design
 
@@ -236,9 +237,3 @@ Implementation can now begin using:
 - Tailwind CSS
 
 And so it begins.
-
----
-
-© 2026 Flying Fortress Games. Content licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-Code licensed under [MIT](LICENSE).
-Attribution: "Deriving a Visual Language — Flying Fortress Games"

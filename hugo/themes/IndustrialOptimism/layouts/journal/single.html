@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<article class="journal-article">
+  <header class="journal-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.journal_number }}
+        <p class="journal-kicker">Post {{ . }}</p>
+    {{ end }}
+
+    <p class="journal-meta">
+      {{ .Date.Format "2 January 2006" }}
+    </p>
+  </header>
+
+  <div class="journal-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="journal-footer">
+    <hr>
+
+    <p>© {{ now.Year }} Flying Fortress Games.</p>
+
+    <p>
+      Content licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+        CC BY-NC-SA 4.0
+      </a>.
+    </p>
+
+    <p>Source code licensed under the MIT License where applicable.</p>
+
+    <p>
+      Attribution:
+      "{{ .Title }} — Flying Fortress Games"
+    </p>
+  </footer>
+</article>
+{{end}}

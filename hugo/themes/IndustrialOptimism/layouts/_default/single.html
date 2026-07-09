@@ -1,2 +1,19 @@
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+<header class="site-header">
+  <a class="site-brand" href="{{ "/" | relLangURL }}">
+    Flying Fortress Games
+  </a>
+</header>
+
+<article class="page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Description }}
+      <p class="page-description">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+</article>
