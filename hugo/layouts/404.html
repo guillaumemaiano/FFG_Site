@@ -2,30 +2,40 @@
 
 <article class="error-page">
 
-  <header class="error-header">
-    <p class="error-code">404</p>
+  <div class="error-visual">
+    {{ partial "image.html" (dict
+      "src" "images/404.png"
+      "alt" "Mer de nuages over the Dover cliffs"
+      "class" "error-image"
+    ) }}
+  </div>
 
-    <h1>We've lost visual contact.</h1>
+  <div class="error-panel">
+    <header class="error-header">
+      <p class="error-code">404</p>
 
-    <p class="error-summary">
-      The page you're looking for is no longer on our flight plan,
-      or perhaps never left the hangar.
-    </p>
-  </header>
-  <article class="error-page error-page--clouds"></article>
-  <section class="error-actions">
-    <p>
-      You can return to the homepage or continue exploring the current projects.
-    </p>
+      <h1>We've lost visual contact.</h1>
 
-    <nav>
-      <ul>
-        <li><a href="{{ "/" | relLangURL }}">Home</a></li>
-        <li><a href="{{ "/projects/" | relLangURL }}">Projects</a></li>
-        <li><a href="{{ "/journal/" | relLangURL }}">Journal</a></li>
-      </ul>
-    </nav>
-  </section>
+      <p class="error-summary">
+        The page you're looking for is no longer on our flight plan,
+        or perhaps never left the hangar.
+      </p>
+    </header>
+
+    <section class="error-actions">
+      <p>
+        You can return to the homepage or continue exploring the current projects.
+      </p>
+
+      <nav>
+        <ul>
+          <li><a href="{{ "/" | relLangURL }}">Home</a></li>
+          <li><a href="{{ "/projects/" | relLangURL }}">Projects</a></li>
+          <li><a href="{{ "/journal/" | relLangURL }}">Journal</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
 
 </article>
 

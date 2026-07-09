@@ -1,0 +1,19 @@
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+
+{{- with resources.Get $src -}}
+  {{- $img := . -}}
+  {{- $webp := $img.Resize "1600x webp q85" -}}
+
+  <img
+    src="{{ $webp.RelPermalink }}"
+    width="{{ $webp.Width }}"
+    height="{{ $webp.Height }}"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="lazy"
+    decoding="async">
+{{- else -}}
+  {{- warnf "Image not found: %s" $src -}}
+{{- end -}}
