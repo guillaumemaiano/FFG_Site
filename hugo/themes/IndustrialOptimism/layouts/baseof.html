@@ -5,13 +5,15 @@
 </head>
 <body>
   <!-- We are Flying Fortress Games. Bombing the world with love since 2025. -->
-  <header>
+  <header class="site-header">
     {{ partial "header.html" . }}
   </header>
+
   <main>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
+
+  <footer class="site-footer">
     {{ partial "footer.html" . }}
   </footer>
 </body>
