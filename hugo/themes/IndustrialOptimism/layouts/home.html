@@ -6,16 +6,45 @@
   </header>
 
   <div class="home__entries">
-    {{ range site.RegularPages }}
+
+    {{ range first 1 (where site.RegularPages "Params.featured_home" true) }}
       <article class="home-entry home-entry--{{ .Section }}">
 
         <header class="home-entry__header">
+          <p class="home-entry__type">Featured world</p>
+
+          <h2 class="home-entry__title">
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </h2>
+        </header>
+
+        {{ with .Description }}
+          <div class="home-entry__summary">
+            <p>{{ . }}</p>
+          </div>
+        {{ end }}
+
+        {{ with .Params.featured_image }}
+          <img
+            class="home-entry__image"
+            src="{{ . | relURL }}"
+            alt=""
+          >
+        {{ end }}
+
+        <a class="home-entry__link" href="{{ .RelPermalink }}">
+          Explore the world
+        </a>
+
+      </article>
+    {{ end }}
+
+    {{ range first 1 (where site.RegularPages "Section" "journal") }}
+      <article class="home-entry home-entry--journal">
+
+        <header class="home-entry__header">
           <p class="home-entry__type">
-            {{ if eq .Section "journal" }}
-              Devlog {{ with .Params.journal_number }}#{{ . }}{{ end }}
-            {{ else }}
-              {{ .Section | singularize | humanize }}
-            {{ end }}
+            Devlog {{ with .Params.journal_number }}#{{ . }}{{ end }}
           </p>
 
           <h2 class="home-entry__title">
@@ -23,16 +52,27 @@
           </h2>
         </header>
 
-        <div class="home-entry__summary">
-          {{ .Summary }}
-        </div>
+        {{ with .Description }}
+          <div class="home-entry__summary">
+            <p>{{ . }}</p>
+          </div>
+        {{ end }}
+
+        {{ with .Params.featured_image }}
+          <img
+            class="home-entry__image"
+            src="{{ . | relURL }}"
+            alt=""
+          >
+        {{ end }}
 
         <a class="home-entry__link" href="{{ .RelPermalink }}">
-          Read more
+          Read the devlog
         </a>
 
       </article>
     {{ end }}
+
   </div>
 
 </div>
