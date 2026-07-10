@@ -58,6 +58,9 @@
   --content-width: 72rem;
   --article-width: 44rem;
 
+  /* Layout containers */
+  --container-bg: var(--color-midnight-blue);
+
   /* Borders and radii */
   --border-width: 1px;
   --radius-sm: 0.125rem;
