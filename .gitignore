@@ -24,7 +24,7 @@ Gemfile.lock
 public/
 
 # Hugo cache
-resources/_gen/
+**/resources/_gen/
 
 
 ## Tailwind
