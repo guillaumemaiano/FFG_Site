@@ -1,0 +1,50 @@
+:root {
+  /* Color: raw palette */
+  --color-midnight-blue: #0D1B2A;
+  --color-ivory: #F2EFE6;
+  --color-brass: #C8A24B;
+  --color-slate: #3B4754;
+  --color-walnut: #5A3A22;
+  --color-ocean-blue: #1E3A4A;
+
+  /* Color: semantic roles */
+  --surface-page: var(--color-ivory);
+  --surface-panel: #ffffff;
+  --text-main: var(--color-midnight-blue);
+  --text-muted: var(--color-slate);
+  --accent-primary: var(--color-brass);
+  --accent-secondary: var(--color-ocean-blue);
+  --border-subtle: color-mix(in srgb, var(--color-midnight-blue) 18%, transparent);
+
+  /* Typography */
+  --font-heading: "Marcellus", "Cormorant Garamond", "Source Serif 4", serif;
+  --font-body: "Gill Sans", "Gill Sans MT", "Avenir Next", "Segoe UI", sans-serif;
+  --font-code: "IBM Plex Mono", "Cascadia Code", monospace;
+
+  /* Type scale */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --content-width: 72rem;
+  --article-width: 44rem;
+
+  /* Borders / radius */
+  --border-width: 1px;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+
+  /* Motion */
+  --transition-fast: 120ms ease-out;
+}
