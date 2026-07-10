@@ -8,7 +8,7 @@ description: "Building the design system before designing the website."
 
 # From Design Tokens to Takeoff
 
-> Read Part 1: [Deriving a Visual Language](./1-visual-language-and-web-design/)
+> Read Part 1: [Deriving a Visual Language](../post1)
 
 ---
 

@@ -88,7 +88,19 @@ The explored directions included:
 - Hamptons Explorer
 - Editorial Art Deco
 
-One additional concept—Celestial Fortress—was eventually discarded after discussion.
+{{< image
+  src="images/journal/design-exploration-four-directions.png"
+  alt="Four design direction mockups among the many options"
+  class="journal-image"
+>}}
+
+Some concepts, such as the gorgeous 'Celestial Fortress' were eventually discarded after discussion. Too different from what we felt FFG really is.
+
+{{< image
+  src="images/journal/cancellation-rejected-concept.png"
+  alt="Rejected design concept"
+  class="journal-image"
+>}}
 
 At this stage, no attempt was made to choose a winner.
 
@@ -133,6 +145,12 @@ This phase eventually produced comparison tables summarizing:
 - weaknesses
 
 The comparison itself became one of the project's primary design artifacts.
+
+{{< image
+  src="images/journal/red-salon-vs-art-deco-comparison.png"
+  alt="Officer's Study / Red Salon versus French Industrial Art Deco"
+  class="journal-image"
+>}}
 
 ---
 
