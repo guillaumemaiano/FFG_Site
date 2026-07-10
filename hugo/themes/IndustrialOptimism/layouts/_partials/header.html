@@ -1,7 +1,11 @@
-<h1 class="site-title">
-  <a class="site-brand" href="{{ "/" | relLangURL }}">
-    {{ site.Title }}
-  </a>
-</h1>
+<header class="site-header">
+  <div class="site-frame site-header__content">
+    <h1 class="site-title">
+      <a class="site-brand" href="{{ "/" | relLangURL }}">
+        {{ site.Title }}
+      </a>
+    </h1>
 
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+</header>
