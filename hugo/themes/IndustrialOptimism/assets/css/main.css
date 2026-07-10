@@ -1,7 +1,5 @@
 @import "tailwindcss";
 @import "./tokens.css";
-@import "components/header.css";
-@import "components/footer.css";
 
 body {
   margin: 0;
@@ -13,8 +11,6 @@ body {
 
 main {
   min-height: 70vh;
-  background: var(--container-bg);
-  padding: var(--space-2xl) var(--space-lg);
 }
 
 h1,
@@ -237,6 +233,11 @@ a:hover {
     var(--content-width)
   );
   margin-inline: auto;
+}
+
+.main-frame {
+  background: var(--container-bg);
+  padding: var(--space-2xl) var(--space-lg);
 }
 
 /* ========================================
@@ -611,5 +612,161 @@ a:hover {
   .journal-content .article-body {
     max-width: none; /* Allow full width on mobile */
     padding: 0 var(--space-md);
+  }
+}
+
+/* ========================================
+   HOMEPAGE — Discussion Prototype
+   ======================================== */
+
+.home {
+  color: var(--surface-page);
+}
+
+.home__intro {
+  max-width: var(--article-width);
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+.home__intro h1 {
+  margin: 0 0 var(--space-md);
+  color: var(--surface-page);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.home__intro p {
+  max-width: 48ch;
+  margin: var(--space-sm) auto;
+  color: color-mix(
+    in srgb,
+    var(--surface-page) 75%,
+    transparent
+  );
+  font-size: var(--text-lg);
+}
+
+.home__entries {
+  display: grid;
+  gap: var(--space-lg);
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.home-entry {
+  position: relative;
+  padding: var(--space-xl);
+  overflow: hidden;
+
+  background: var(--surface-page);
+  color: var(--text-main);
+
+  border: var(--border-width) solid var(--accent-primary);
+  border-radius: var(--radius-md);
+
+  box-shadow:
+    inset 0 0 0 3px var(--text-main),
+    var(--elevation-2);
+}
+
+.home-entry__header {
+  max-width: 44rem;
+  margin-bottom: var(--space-md);
+}
+
+.home-entry__type {
+  margin: 0 0 var(--space-sm);
+
+  color: var(--accent-primary);
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-entry__title {
+  margin: 0;
+  font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.home-entry__title a {
+  color: var(--text-main);
+}
+
+.home-entry__title a:hover,
+.home-entry__title a:focus-visible {
+  color: var(--accent-secondary);
+}
+
+.home-entry__summary {
+  max-width: 62ch;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.home-entry__summary > :first-child {
+  margin-top: 0;
+}
+
+.home-entry__summary > :last-child {
+  margin-bottom: 0;
+}
+
+.home-entry__link {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  padding-bottom: var(--space-xs);
+
+  color: var(--accent-secondary);
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  font-weight: 700;
+
+  border-bottom: var(--border-width) solid var(--accent-primary);
+}
+
+.home-entry__link:hover,
+.home-entry__link:focus-visible {
+  color: var(--accent-primary);
+}
+
+/* Give the latest item greater visual importance. */
+.home-entry:first-child {
+  padding-block: var(--space-2xl);
+}
+
+/* Lightweight distinction between content families. */
+.home-entry--journal {
+  background:
+    linear-gradient(
+      135deg,
+      var(--surface-page),
+      color-mix(
+        in srgb,
+        var(--surface-page) 94%,
+        var(--accent-primary)
+      )
+    );
+}
+
+@media (max-width: 48rem) {
+  .home__intro {
+    margin-bottom: var(--space-lg);
+    text-align: left;
+  }
+
+  .home__intro p {
+    margin-inline: 0;
+  }
+
+  .home-entry,
+  .home-entry:first-child {
+    padding: var(--space-lg);
   }
 }

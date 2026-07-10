@@ -1,9 +1,39 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <section>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
-    </section>
-  {{ end }}
+<div class="main-frame home">
+
+  <header class="home__intro">
+    {{ .Content }}
+  </header>
+
+  <div class="home__entries">
+    {{ range site.RegularPages }}
+      <article class="home-entry home-entry--{{ .Section }}">
+
+        <header class="home-entry__header">
+          <p class="home-entry__type">
+            {{ if eq .Section "journal" }}
+              Devlog {{ with .Params.journal_number }}#{{ . }}{{ end }}
+            {{ else }}
+              {{ .Section | singularize | humanize }}
+            {{ end }}
+          </p>
+
+          <h2 class="home-entry__title">
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </h2>
+        </header>
+
+        <div class="home-entry__summary">
+          {{ .Summary }}
+        </div>
+
+        <a class="home-entry__link" href="{{ .RelPermalink }}">
+          Read more
+        </a>
+
+      </article>
+    {{ end }}
+  </div>
+
+</div>
 {{ end }}
