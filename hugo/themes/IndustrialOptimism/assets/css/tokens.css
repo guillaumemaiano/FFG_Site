@@ -34,7 +34,7 @@
 
   /* Typography */
   --font-heading: "Marcellus", "Cormorant Garamond", "Source Serif 4", serif;
-  --font-body: "Gill Sans", "Gill Sans MT", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "B612", "Source Sans 3", "PT Sans", "Gill Sans", "Gill Sans MT", "Segoe UI", sans-serif;
   --font-code: "IBM Plex Mono", "Cascadia Code", monospace;
 
   /* Type scale */
@@ -82,219 +82,175 @@
 
 /* Font definitions */
 
-/* ibm-plex-mono-regular - latin */
+/* ===== IBM Plex Mono ===== */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 400;
-src: url('/fonts/ibm-plex-mono-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/ibm-plex-mono-v20-latin/ibm-plex-mono-v20-latin-regular.woff2') format('woff2');
 }
-/* ibm-plex-mono-italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'IBM Plex Mono';
   font-style: italic;
   font-weight: 400;
-src: url('/fonts/ibm-plex-mono-v20-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/ibm-plex-mono-v20-latin/ibm-plex-mono-v20-latin-italic.woff2') format('woff2');
 }
-/* ibm-plex-mono-500 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 500;
-src: url('/fonts/ibm-plex-mono-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/ibm-plex-mono-v20-latin/ibm-plex-mono-v20-latin-500.woff2') format('woff2');
 }
-/* ibm-plex-mono-500italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'IBM Plex Mono';
   font-style: italic;
   font-weight: 500;
-src: url('/fonts/ibm-plex-mono-v20-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/ibm-plex-mono-v20-latin/ibm-plex-mono-v20-latin-500italic.woff2') format('woff2');
 }
-/* ibm-plex-mono-700 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 700;
-src: url('/fonts/ibm-plex-mono-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/ibm-plex-mono-v20-latin/ibm-plex-mono-v20-latin-700.woff2') format('woff2');
 }
-/* ibm-plex-mono-700italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'IBM Plex Mono';
   font-style: italic;
   font-weight: 700;
-src: url('/fonts/ibm-plex-mono-v20-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/ibm-plex-mono-v20-latin/ibm-plex-mono-v20-latin-700italic.woff2') format('woff2');
 }
-/* pt-sans-regular - latin */
+
+/* ===== PT Sans ===== */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-src: url('/fonts/pt-sans-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/pt-sans-v18-latin/pt-sans-v18-latin-regular.woff2') format('woff2');
 }
-/* pt-sans-italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: italic;
   font-weight: 400;
-src: url('/fonts/pt-sans-v18-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/pt-sans-v18-latin/pt-sans-v18-latin-italic.woff2') format('woff2');
 }
-/* pt-sans-700 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
-src: url('/fonts/pt-sans-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/pt-sans-v18-latin/pt-sans-v18-latin-700.woff2') format('woff2');
 }
-/* pt-sans-700italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: italic;
   font-weight: 700;
-src: url('/fonts/pt-sans-v18-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/pt-sans-v18-latin/pt-sans-v18-latin-700italic.woff2') format('woff2');
 }
-/* source-sans-3-regular - latin */
+
+/* ===== Source Sans 3 ===== */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 400;
-src: url('/fonts/source-sans-3-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v19-latin/source-sans-3-v19-latin-regular.woff2') format('woff2');
 }
-/* source-sans-3-italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Source Sans 3';
   font-style: italic;
   font-weight: 400;
-src: url('/fonts/source-sans-3-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v19-latin/source-sans-3-v19-latin-italic.woff2') format('woff2');
 }
-/* source-sans-3-500 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 500;
-src: url('/fonts/source-sans-3-v19-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v19-latin/source-sans-3-v19-latin-500.woff2') format('woff2');
 }
-/* source-sans-3-500italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Source Sans 3';
   font-style: italic;
   font-weight: 500;
-src: url('/fonts/source-sans-3-v19-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v19-latin/source-sans-3-v19-latin-500italic.woff2') format('woff2');
 }
-/* source-sans-3-700 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 700;
-src: url('/fonts/source-sans-3-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v19-latin/source-sans-3-v19-latin-700.woff2') format('woff2');
 }
-/* source-sans-3-700italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Source Sans 3';
   font-style: italic;
   font-weight: 700;
-src: url('/fonts/source-sans-3-v19-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v19-latin/source-sans-3-v19-latin-700italic.woff2') format('woff2');
 }
-/* b612-regular - latin */
+
+/* ===== B612 ===== */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'B612';
   font-style: normal;
   font-weight: 400;
-src: url('/fonts/b612-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/b612-v13-latin/b612-v13-latin-regular.woff2') format('woff2');
 }
-/* b612-italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'B612';
   font-style: italic;
   font-weight: 400;
-src: url('/fonts/b612-v13-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/b612-v13-latin/b612-v13-latin-italic.woff2') format('woff2');
 }
-/* b612-700 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'B612';
   font-style: normal;
   font-weight: 700;
-src: url('/fonts/b612-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/b612-v13-latin/b612-v13-latin-700.woff2') format('woff2');
 }
-/* b612-700italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'B612';
   font-style: italic;
   font-weight: 700;
-src: url('/fonts/b612-v13-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/b612-v13-latin/b612-v13-latin-700italic.woff2') format('woff2');
 }
-/* marcellus-regular - latin */
+
+/* ===== Marcellus ===== */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Marcellus';
   font-style: normal;
   font-weight: 400;
-src: url('/fonts/marcellus-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Sans 3';
-  font-style: normal;
-  font-weight: 400;
-src: url('/fonts/source-sans-3-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Sans 3';
-  font-style: italic;
-  font-weight: 400;
-src: url('/fonts/source-sans-3-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Sans 3';
-  font-style: normal;
-  font-weight: 500;
-src: url('/fonts/source-sans-3-v19-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-500italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Sans 3';
-  font-style: italic;
-  font-weight: 500;
-src: url('/fonts/source-sans-3-v19-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Sans 3';
-  font-style: normal;
-  font-weight: 700;
-src: url('/fonts/source-sans-3-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-700italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Sans 3';
-  font-style: italic;
-  font-weight: 700;
-src: url('/fonts/source-sans-3-v19-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/marcellus-v14-latin/marcellus-v14-latin-regular.woff2') format('woff2');
 }
