@@ -1,9 +1,45 @@
-<div class="site-frame site-header__content">
-  <h1 class="site-title">
-    <a class="site-brand" href="{{ "/" | relLangURL }}">
-      {{ site.Title }}
-    </a>
-  </h1>
+<div class="site-frame site-header-content">
+
+  <a class="site-brand" href="{{ "/" | relLangURL }}">
+    <svg
+      class="site-brand__logo"
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+      aria-hidden="true"
+    >
+      <circle
+        cx="18"
+        cy="18"
+        r="16"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+      />
+      <text
+        x="18"
+        y="22"
+        text-anchor="middle"
+        font-size="14"
+        font-weight="bold"
+      >FFG</text>
+    </svg>
+
+    <span class="site-brand__text">
+      <span class="site-brand__name">FLYING FORTRESS</span>
+      <span class="site-brand__subtitle">GAMES</span>
+    </span>
+  </a>
 
   {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
 </div>
+<!-- Corner accents (outside content container, on header bar itself) -->
+<svg class="site-header__corner site-header__corner--left" width="32" height="32" viewBox="0 0 32 32"
+  aria-hidden="true">
+  <path d="M0,0 L32,0 L32,32 L28,32 L28,4 L0,4 Z" fill="currentColor" opacity="0.6" />
+</svg>
+<svg class="site-header__corner site-header__corner--right" width="32" height="32" viewBox="0 0 32 32"
+  aria-hidden="true">
+  <path d="M0,0 L32,0 L32,28 L4,28 L4,32 L0,32 Z" fill="currentColor" opacity="0.6" />
+</svg>

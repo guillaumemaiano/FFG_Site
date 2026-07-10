@@ -241,69 +241,6 @@ a:hover {
 }
 
 /* ========================================
-   TEMPORARY HEADER THEME
-   ======================================== */
-
-.site-header {
-  background-color: var(--color-midnight-blue);
-  border-bottom: var(--border-width) solid var(--border-highlight);
-  color: var(--surface-page);
-}
-
-.site-header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
-  padding-block: var(--space-md);
-}
-
-.site-title {
-  margin: 0;
-  font-size: var(--text-lg);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.site-brand {
-  color: var(--surface-page);
-}
-
-.site-brand:hover,
-.site-brand:focus-visible {
-  color: var(--accent-primary);
-}
-
-.site-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-lg);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-header nav a {
-  color: var(--surface-page);
-  font-size: var(--text-sm);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.site-header nav a:hover,
-.site-header nav a:focus-visible {
-  color: var(--accent-primary);
-}
-
-.site-header a:focus-visible {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 4px;
-}
-
-/* ========================================
    TEMPORARY FOOTER THEME
    ======================================== */
 
@@ -351,16 +288,6 @@ a:hover {
 }
 
 @media (max-width: 48rem) {
-  .site-header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-md);
-  }
-
-  .site-header nav ul {
-    gap: var(--space-md);
-  }
-
   .site-footer-content {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
@@ -768,5 +695,146 @@ a:hover {
   .home-entry,
   .home-entry:first-child {
     padding: var(--space-lg);
+  }
+}
+
+/* ========================================
+   SITE HEADER
+   ======================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-midnight-blue);
+  border-bottom: var(--border-width) solid var(--accent-primary);
+  color: var(--surface-page);
+}
+
+.site-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding-block: var(--space-sm);
+}
+
+/* Logo + logotype */
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+  color: var(--surface-page);
+  text-decoration: none;
+}
+
+.site-brand:hover,
+.site-brand:focus-visible {
+  color: var(--accent-primary);
+}
+
+.site-brand__logo {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+}
+
+.site-brand__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: inherit;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-brand__text > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.site-brand__subtitle {
+  margin-top: 0.25em;
+  font-size: 0.72em;
+  letter-spacing: 0.14em;
+}
+
+/* Art Deco corner accents */
+.site-header__corner {
+  position: absolute;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  color: var(--accent-primary);
+  pointer-events: none;
+}
+
+.site-header__corner--left {
+  left: 0;
+}
+
+.site-header__corner--right {
+  right: 0;
+}
+
+/* Navigation */
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header nav a {
+  color: var(--surface-page);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.site-header nav a.active {
+  color: var(--accent-primary);
+}
+
+.site-header a:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+}
+
+@media (max-width: 64rem) {
+  .site-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .site-header nav ul {
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 30rem) {
+  .site-header-content {
+    padding-block: var(--space-xs);
+  }
+
+  .site-brand__logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .site-brand__text {
+    font-size: var(--text-base);
   }
 }
