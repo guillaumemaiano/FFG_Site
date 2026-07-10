@@ -1,56 +1,43 @@
 {{ define "main" }}
 
 <article class="journal-article">
-  <header class="journal-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.journal_number }}
-        <p class="journal-kicker">Post {{ . }}</p>
+  
+  <div class="journal-panel">
+    
+    <header class="journal-header">
+      <p class="journal-kicker">Post {{ .Params.journal_number }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="journal-meta">{{ .Date.Format "2 January 2006" }}</p>
+    </header>
+
+    <div class="journal-content">
+      {{ .Content }}
+    </div>
+
+    {{ if .Params.youtube_id }}
+    <h2>VLOG</h2>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube_id }}"
+        title="{{ .Title }}"
+        width="560"
+        height="315"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
     {{ end }}
 
-    <p class="journal-meta">
-      {{ .Date.Format "2 January 2006" }}
-    </p>
-  </header>
-
-  <div class="journal-content">
-    {{ .Content }}
+    <footer class="journal-footer">
+      <hr>
+      <p>© {{ now.Year }} Flying Fortress Games.</p>
+      <p>Content licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+      <p>Source code licensed under the MIT License where applicable.</p>
+      <p>Attribution: "{{ .Title }} — Flying Fortress Games"</p>
+    </footer>
+  
   </div>
 
-<div>
-  {{ if .Params.youtube_id }}
-  <h2>VLOG</h2>
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube_id }}"
-      title="{{ .Title }}"
-      width="560"
-      height="315"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-  {{ end }}
-</div>
-
-  <footer class="journal-footer">
-    <hr>
-
-    <p>© {{ now.Year }} Flying Fortress Games.</p>
-
-    <p>
-      Content licensed under
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-        CC BY-NC-SA 4.0
-      </a>.
-    </p>
-
-    <p>Source code licensed under the MIT License where applicable.</p>
-
-    <p>
-      Attribution:
-      "{{ .Title }} — Flying Fortress Games"
-    </p>
-  </footer>
 </article>
-{{end}}
+{{ end }}
