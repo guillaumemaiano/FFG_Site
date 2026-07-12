@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+branch=$(git symbolic-ref --short HEAD)
+
+if [ "$branch" = "main" ]; then
+    echo
+    echo "❌ Direct commits to 'main' are forbidden."
+    echo "Please create or switch to a development branch."
+    echo
+    exit 1
+fi
