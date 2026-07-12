@@ -758,7 +758,7 @@ a:hover {
   white-space: nowrap;
 }
 
-.site-brand__subtitle {
+.site-brand__subtitle:hover {
   margin-top: 0.25em;
   font-size: 0.72em;
   letter-spacing: 0.14em;
@@ -837,4 +837,53 @@ a:hover {
   .site-brand__text {
     font-size: var(--text-base);
   }
+}
+
+/* ========================================
+   JOURNAL — RSS CTA
+   ======================================== */
+
+.rss-journal-cta {
+  margin-block: var(--space-xl);
+  text-align: center;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  padding: var(--space-sm) var(--space-md);
+
+  border: var(--border-width) solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+
+  color: var(--text-main);
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    color var(--ease-out),
+    background-color var(--ease-out);
+}
+
+.rss-link img {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.rss-link:hover,
+.rss-link:focus-visible {
+  background-color: var(--accent-primary);
+  color: var(--text-main);
+}
+
+.rss-link:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
 }

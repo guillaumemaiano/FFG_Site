@@ -8,7 +8,7 @@ Install the following tools before working on the project:
 
 * Git
 * Hugo (Extended edition)
-* Node.js (LTS)
+* Node.js and npm
 * Visual Studio Code (recommended)
 
 ## Install Hugo
@@ -47,16 +47,16 @@ Otherwise, install Hugo from the official release packages.
 
 ## Install Node.js
 
-Node.js is required to install and run Tailwind CSS.
+Node.js and npm are required to install and run Tailwind CSS.
 
-Verify whether Node.js and npm are already installed:
+Verify whether they are already installed:
 
 ```bash
 node --version
 npm --version
 ```
 
-Use a current **LTS release** of Node.js.
+Use a current Node.js LTS release.
 
 ### Windows
 
@@ -76,37 +76,43 @@ brew install node
 
 ### Linux
 
-Install the current Node.js LTS release using your distribution's package manager or another suitable installation method.
+Install a current Node.js LTS release using an appropriate installation method for your distribution.
 
 ## Install project dependencies
 
-Tailwind CSS is installed locally as a project dependency.
+From the repository root, enter the Hugo project directory:
 
-From the repository root, run:
+```bash
+cd hugo
+```
+
+Install the dependencies declared in `package.json`:
 
 ```bash
 npm install
 ```
 
-This installs the dependencies declared in `package.json`.
+This installs Tailwind CSS and its command-line interface locally for the project.
 
 Do not install Tailwind CSS globally.
 
-## Configure the repository
+## Check the contribution guide
 
-Follow the contribution guide before making your first commit:
+Before making your first commit, read the contribution guide:
 
 [CONTRIBUTING.md](../CONTRIBUTING.md)
 
 ## Run the development environment
 
-From the repository root, start the Tailwind development process:
+From the `hugo/` directory, start the Tailwind CSS watcher:
 
 ```bash
 npm run dev
 ```
 
-In another terminal, start the Hugo development server:
+Keep it running while editing the styles.
+
+In another terminal, from the same directory, start the Hugo development server:
 
 ```bash
 hugo server
@@ -120,19 +126,19 @@ http://localhost:1313
 
 ## Production build
 
-Generate the Tailwind CSS production output:
+From the `hugo/` directory, generate the minified Tailwind stylesheet:
 
 ```bash
 npm run build
 ```
 
-Then build the Hugo website:
+Then generate the website:
 
 ```bash
 hugo
 ```
 
-The generated website will be written to the `public/` directory.
+The generated website will be written to `hugo/public/`.
 
 ## Troubleshooting
 
