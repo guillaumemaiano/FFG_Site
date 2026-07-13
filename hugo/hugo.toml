@@ -22,7 +22,7 @@ weight = 2
     author = "Flying Fortress Games"
 
 #[outputs]
-#home = ['HTML', 'RSS']
+home = ['HTML', 'RSS']
 
 [[menus.main]]
 name = 'DEVLOG'

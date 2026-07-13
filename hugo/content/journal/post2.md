@@ -9,7 +9,7 @@ featured_image: "images/journal/french-industrial-art-deco-hero.png"
 
 # From Design Tokens to Takeoff
 
-> Read Part 1: [Deriving a Visual Language](../post1)
+> Read Part 1: [Deriving a Visual Language](/journal/post1)
 
 ---
 
