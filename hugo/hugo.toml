@@ -1,4 +1,4 @@
-baseURL = 'https://www.flyingfortressgames.com/'
+baseURL = 'https://flyingfortressgames.com/'
 locale = 'en-us'
 title = 'Flying Fortress Games'
 enableRobotsTXT = true
@@ -20,3 +20,23 @@ weight = 2
 
 #[outputs]
 #home = ['HTML', 'RSS']
+
+[[menus.main]]
+name = 'DEVLOG'
+pageRef = '/journal'
+weight = 10
+
+[[menus.main]]
+name = 'PROJECTS'
+pageRef = '/projects'
+weight = 20
+
+[[menus.main]]
+name = 'ABOUT'
+pageRef = '/about'
+weight = 30
+
+[[menus.main]]
+name = 'CONTACT'
+pageRef = '/contact'
+weight = 40

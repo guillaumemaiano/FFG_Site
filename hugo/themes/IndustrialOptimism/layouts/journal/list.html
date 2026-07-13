@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="main-frame">
+  <section class="site-frame devlog-index">
+
+    <header class="devlog-index__header">
+      <h1>{{ .Title }}</h1>
+      <p>Engineering notes from the machine room.</p>
+    </header>
+
+    <div class="devlog-index__entries">
+      {{ range .Pages.ByDate.Reverse }}
+        {{ $post := . }}
+
+        <article class="devlog-entry">
+          <div class="devlog-entry__meta">
+            <span>DEVLOG {{ printf "%03d" .Params.journal_number }}</span>
+
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "02 JAN 2006" | upper }}
+            </time>
+
+            {{ if .Params.youtube_id }}
+              <span class="devlog-entry__video" title="Video available">
+                {{ partial "icons/youtube.svg" . }}
+              </span>
+            {{ end }}
+
+            <span>{{ .ReadingTime }} MIN READ</span>
+          </div>
+
+          <div class="devlog-entry__body">
+            <h2>
+              <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            </h2>
+
+            {{ with .Description }}
+              <p>{{ . }}</p>
+            {{ end }}
+
+            {{ with .Params.featured_image }}
+              <a
+                class="devlog-entry__image"
+                href="{{ $post.RelPermalink }}"
+                aria-label="Read {{ $post.LinkTitle }}"
+              >
+                {{ partial "image.html" (dict
+                  "src" .
+                  "alt" ""
+                  "class" "devlog-entry__thumbnail"
+                ) }}
+              </a>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+
+  </section>
+</div>
+{{ end }}

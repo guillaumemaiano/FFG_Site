@@ -1,4 +1,46 @@
-<h1>{{ .Title }}</h1>
-{{ range .Pages }}
-  <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+{{ define "main" }}
+<div class="main-frame">
+  <section class="site-frame">
+    <header class="home__intro">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}
+        <div>{{ . }}</div>
+      {{ end }}
+    </header>
+
+    <div class="home__entries">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="home-entry home-entry--{{ .Section }}">
+          <header class="home-entry__header">
+            <p class="home-entry__type">
+              {{ if eq .Section "journal" }}
+                Devlog {{ with .Params.journal_number }}#{{ . }}{{ end }}
+              {{ else }}
+                Project
+              {{ end }}
+            </p>
+
+            <h2 class="home-entry__title">
+              <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            </h2>
+          </header>
+
+          {{ with .Description }}
+            <div class="home-entry__summary">
+              <p>{{ . }}</p>
+            </div>
+          {{ end }}
+
+          <a class="home-entry__link" href="{{ .RelPermalink }}">
+            {{ if eq .Section "journal" }}
+              Read the devlog
+            {{ else }}
+              Explore the project
+            {{ end }}
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
 {{ end }}
