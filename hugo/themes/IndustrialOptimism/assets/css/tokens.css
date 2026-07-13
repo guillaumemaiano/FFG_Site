@@ -73,7 +73,7 @@ IMAGE TREATMENT
 ////////////////////////////*/
 --document-image-filter: grayscale(100%);
 --document-image-position: left top;
---document-thumbnail-ratio: 3 / 4;
+--document-thumbnail-ratio: 7 / 3;
   /* ========================================
      TYPOGRAPHY
      ======================================== */

@@ -1099,11 +1099,11 @@ a:hover {
 
 @media (max-width: 64rem) {
   .devlog-entry--has-image {
-    grid-template-columns:
-      minmax(7rem, 18%)
-      minmax(0, 1fr)
-      minmax(10rem, 25%);
-  }
+  grid-template-columns:
+    minmax(7rem, 13%)
+    minmax(0, 1fr)
+    minmax(16rem, 32%);
+}
 }
 
 @media (max-width: 48rem) {
@@ -1140,3 +1140,63 @@ a:hover {
   }
 }
 
+.devlog-index__footer {
+  padding-top: var(--space-xl);
+}
+
+.devlog-youtube-cta {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(var(--space-md), 3vw, var(--space-lg));
+
+  padding: clamp(var(--space-lg), 4vw, var(--space-xl));
+
+  background: var(--document-text);
+  color: var(--document-surface);
+  border: var(--border-width) solid var(--document-text);
+}
+
+.devlog-youtube-cta:hover,
+.devlog-youtube-cta:focus-visible {
+  background: var(--document-surface);
+  color: var(--document-text);
+}
+
+.devlog-youtube-cta__icon {
+  display: flex;
+}
+
+.devlog-youtube-cta__icon svg {
+  width: clamp(2rem, 4vw, 3rem);
+  height: auto;
+}
+
+.devlog-youtube-cta__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.devlog-youtube-cta__content strong {
+  font-family: var(--document-font-title);
+  font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
+}
+
+.devlog-youtube-cta__content span,
+.devlog-youtube-cta__action {
+  font-family: var(--document-font-meta);
+  font-size: 0.78rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 48rem) {
+  .devlog-youtube-cta {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .devlog-youtube-cta__action {
+    grid-column: 2;
+  }
+}
