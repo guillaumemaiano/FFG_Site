@@ -5,13 +5,30 @@
     <header class="devlog-index__header">
       <h1>{{ .Title }}</h1>
       <p>Engineering notes from the machine room.</p>
+
+      <nav
+        class="devlog-index__subscriptions"
+        aria-label="Journal subscriptions"
+      >
+        {{ with .OutputFormats.Get "RSS" }}
+          <a href="{{ .RelPermalink }}">
+            {{ partial "icons/rss.svg" $ }}
+            <span>RSS</span>
+          </a>
+        {{ end }}
+
+        <a href="FFG_YOUTUBE_CHANNEL_URL">
+          {{ partial "icons/youtube.svg" . }}
+          <span>YouTube</span>
+        </a>
+      </nav>
     </header>
 
     <div class="devlog-index__entries">
       {{ range .Pages.ByDate.Reverse }}
         {{ $post := . }}
 
-        <article class="devlog-entry">
+        <article class="devlog-entry{{ with .Params.featured_image }} devlog-entry--has-image{{ end }}">
           <div class="devlog-entry__meta">
             <span>DEVLOG {{ printf "%03d" .Params.journal_number }}</span>
 
@@ -20,7 +37,11 @@
             </time>
 
             {{ if .Params.youtube_id }}
-              <span class="devlog-entry__video" title="Video available">
+              <span
+                class="devlog-entry__video"
+                title="Video available"
+                aria-label="Video available"
+              >
                 {{ partial "icons/youtube.svg" . }}
               </span>
             {{ end }}
@@ -36,21 +57,21 @@
             {{ with .Description }}
               <p>{{ . }}</p>
             {{ end }}
-
-            {{ with .Params.featured_image }}
-              <a
-                class="devlog-entry__image"
-                href="{{ $post.RelPermalink }}"
-                aria-label="Read {{ $post.LinkTitle }}"
-              >
-                {{ partial "image.html" (dict
-                  "src" .
-                  "alt" ""
-                  "class" "devlog-entry__thumbnail"
-                ) }}
-              </a>
-            {{ end }}
           </div>
+
+          {{ with .Params.featured_image }}
+            <a
+              class="devlog-entry__image"
+              href="{{ $post.RelPermalink }}"
+              aria-label="Read {{ $post.LinkTitle }}"
+            >
+              {{ partial "image.html" (dict
+                "src" .
+                "alt" ""
+                "class" "devlog-entry__thumbnail"
+              ) }}
+            </a>
+          {{ end }}
         </article>
       {{ end }}
     </div>

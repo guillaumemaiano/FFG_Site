@@ -42,6 +42,6 @@ Gill Sans remains in the original mockups—beautiful ghost, impossible ambition
 
 We're now doing the only test that really matters. Reading. Not looking at specimens for five seconds or judging letterforms in isolation. A full journal post, headlined and photographed, laid out in the actual design system. A few thousand words. Twenty minutes. If it still feels effortless, we'll know we're close. If not, we'll keep looking.
 
-Typography doesn't bend to deadlines—it bends to judgment. It rewards patience far more often than inspiration, and teaches you to check the license before falling in love with a name.
+Typography doesn't bend to deadlines — it bends to judgment. It rewards patience far more often than inspiration, and teaches you to check the license before falling in love with a name.
 
 We sailed through the minefield. Barely slowed down. No explosions. Just another reminder that good engineering is often invisible. The best engineering decisions are the ones that quietly remove problems before anyone notices they were ever there.

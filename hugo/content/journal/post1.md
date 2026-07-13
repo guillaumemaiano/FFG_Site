@@ -5,6 +5,7 @@ title = 'Visual Language and Web Design'
 journal_number = 1
 tags = ["vlog"]
 youtube_id = "VIDEO_ID_HERE"
+featured_image = "images/journal/design-exploration-four-directions.png"
 +++
 # Deriving a Visual Language: How Flying Fortress Games Approached Website Design
 
