@@ -74,9 +74,9 @@ third_party/
     ├── B612-OFL-1.1.txt
     └── IBM-PLEX-MONO-OFL-1.1.txt
 
-## Logo needs... making
+### Logo needs... making
  
-### Logo implementation notes
+#### Logo implementation notes
 
 - Design the final emblem.
 - Integrate the brand plaque in the header.
@@ -122,3 +122,34 @@ Investigate, in the future, the feasibility of an AI-assisted RSS analysis pipel
 #### Conclusion
 
 Keep RSS. Some people will use it, and most likely someone will end up making that AI tool. Maybe we will.
+
+## Observation 3 — Brand identity and document identity are distinct
+
+### Observation
+
+Applying the homepage visual language directly to the Devlog archive produced a page that felt decorative rather than documentary.
+
+### Analysis
+
+The homepage expresses the Flying Fortress Games brand, while the Devlog archive expresses its engineering practice. The site's frame carries the identity; the documents themselves prioritize clarity, structure and restraint.
+
+### Decision
+
+The Devlog archive adopts the conventions of professional engineering documentation.
+
+Its design shall favour:
+
+- typography over decoration;
+- structured metadata;
+- optional, secondary imagery;
+- greyscale visuals;
+- IBM Plex Mono for metadata;
+- B612 for titles, summaries and interface text.
+
+The Flying Fortress Games identity remains conveyed primarily by the surrounding website chrome.
+
+### Illustration
+
+The following mockup validated the decision by demonstrating that a restrained, documentation-oriented layout better communicates engineering work than a branded, decorative presentation.
+
+![Devlog archive mockup](20260712_mockup_list.png)

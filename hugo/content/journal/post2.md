@@ -4,6 +4,7 @@ date: 2026-07-09
 journal_number : 2
 draft: false
 description: "Building the design system before designing the website."
+featured_image: "images/journal/french-industrial-art-deco-hero.png"
 ---
 
 # From Design Tokens to Takeoff

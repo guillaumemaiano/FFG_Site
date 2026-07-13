@@ -4,6 +4,7 @@ date: 2026-07-10
 journal_number: 3
 draft:  false
 description: "Ordinary Things. Life. Jazz. Food."
+featured_image: "images/journal/leon-early-morning-sandwich.png"
 ---
 # Ordinary Things. Life. Jazz. Food.
 
