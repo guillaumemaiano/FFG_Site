@@ -27,22 +27,34 @@
       {{ $post := . }}
 
       <article class="devlog-entry{{ with .Params.featured_image }} devlog-entry--has-image{{ end }}">
-        <div class="devlog-entry__meta">
-          <span>DEVLOG {{ printf "%03d" .Params.journal_number }}</span>
+       <div class="devlog-entry__meta">
+  <span>
+    DEVLOG {{ printf "%03d" .Params.journal_number }}
+  </span>
 
-          <time datetime="{{ .Date.Format " 2006-01-02" }}">
-            {{ .Date.Format "02 JAN 2006" | upper }}
-          </time>
+  <time datetime="{{ .Date.Format "2006-01-02" }}">
+    {{ .Date.Format "02 JAN 2006" | upper }}
+  </time>
 
-          {{ if .Params.youtube_id }}
-          <span class="devlog-entry__video" title="Video available" aria-label="Video available">
-            {{ partial "icons/youtube.svg" . }}
-          </span>
-          {{ end }}
+  <span
+    class="devlog-entry__separator"
+    aria-hidden="true"
+  ></span>
 
-          <span>{{ .ReadingTime }} MIN READ</span>
-        </div>
+  <div class="devlog-entry__meta-footer">
+    <span>{{ .ReadingTime }} MIN READ</span>
 
+    {{ if .Params.youtube_id }}
+      <span
+        class="devlog-entry__video"
+        title="Video available"
+        aria-label="Video available"
+      >
+        {{ partial "icons/youtube.svg" . }}
+      </span>
+    {{ end }}
+  </div>
+</div>
         <div class="devlog-entry__body">
           <h2>
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
