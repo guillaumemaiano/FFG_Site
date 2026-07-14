@@ -886,56 +886,114 @@ a:hover {
 .rss-link:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
-}
-/* ========================================
+}/* ========================================
    DEVLOG INDEX
    ======================================== */
 
 .devlog-index {
+  position: relative;
+  isolation: isolate;
+
   box-sizing: border-box;
   width: min(100%, 90rem);
   max-width: none;
   margin-inline: auto;
   padding: clamp(var(--space-lg), 4vw, var(--space-xl));
 
-  background: var(--document-surface);
+  background:
+    radial-gradient(
+      circle at 18% 14%,
+      rgb(255 255 255 / 22%),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 78% 34%,
+      rgb(255 255 255 / 12%),
+      transparent 36rem
+    ),
+    radial-gradient(
+      circle at 44% 84%,
+      rgb(0 0 0 / 2.5%),
+      transparent 42rem
+    ),
+    var(--document-surface);
+
   color: var(--document-text);
 }
+
+.devlog-index::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      rgb(0 0 0 / 5.5%) 0,
+      rgb(0 0 0 / 5.5%) 0.45px,
+      transparent 0.7px,
+      transparent 2px
+    );
+
+  z-index: 0;
+  mix-blend-mode: multiply;
+  background-size: 5px 7px;
+  opacity: 0.18;
+}
+
+.devlog-index > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   Header
+   ======================================== */
 
 .devlog-index__header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-sm) clamp(var(--space-lg), 4vw, var(--space-xl));
-  margin-bottom: clamp(var(--space-lg), 4vw, var(--space-xl));
+
+  margin-bottom: 0;/*clamp(var(--space-lg), 4vw, var(--space-xl));*/
   padding-bottom: var(--space-lg);
+
   border-bottom: var(--border-width) solid var(--document-rule);
 }
 
 .devlog-index__header h1 {
   grid-column: 1;
+
   margin: 0;
 
   color: var(--document-text);
   font-family: var(--document-font-title);
-  font-size: var(--text-2xl);
+  font-size: clamp(1.75rem, 2.2vw, 2.35rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .devlog-index__header > p {
   grid-column: 1;
+
   max-width: 48ch;
   margin: 0;
 
   color: var(--document-text-muted);
   font-family: var(--document-font-text);
+  font-size: clamp(1rem, 0.96rem + 0.12vw, 1.08rem);
+  line-height: 1.55;
 }
 
-/* Archive-level RSS and YouTube actions */
+/* ========================================
+   Header subscriptions
+   ======================================== */
 
 .devlog-index__subscriptions {
   grid-column: 2;
   grid-row: 1 / span 2;
+
   align-self: end;
 
   display: flex;
@@ -948,13 +1006,15 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
+
   padding-block: var(--space-xs);
 
   color: var(--document-text-muted);
+
   font-family: var(--document-font-meta);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.045em;
+  font-size: clamp(0.82rem, 0.79rem + 0.08vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
 
   border-bottom: var(--border-width) solid transparent;
@@ -972,80 +1032,113 @@ a:hover {
 }
 
 .devlog-index__subscriptions svg {
-  width: 1rem;
-  height: 1rem;
-  flex: 0 0 auto;
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
-/* Entries */
+/* ========================================
+   Entries
+   ======================================== */
 
 .devlog-entry {
   display: grid;
-  grid-template-columns:
-    minmax(7rem, 13%)
-    minmax(0, 1fr);
-  gap: clamp(1.5rem, 3vw, 3rem);
 
-  padding-block: clamp(var(--space-lg), 4vw, var(--space-xl));
+  grid-template-columns:
+    minmax(8rem, 14%)
+    minmax(0, 1fr);
+
+  gap: clamp(1.75rem, 3.25vw, 3.5rem);
+
+  padding-block: clamp(1.75rem, 3.6vw, 3.25rem);
+
   border-bottom: var(--border-width) solid var(--document-rule);
 }
 
 .devlog-entry--has-image {
   grid-template-columns:
-    minmax(7rem, 13%)
-    minmax(0, 1fr)
-    minmax(12rem, 27%);
+    minmax(8rem, 14%)
+    minmax(15rem, 1fr)
+    minmax(17rem, 35%);
 }
 
-.devlog-entry:first-child {
-  border-top: var(--border-width) solid var(--document-rule);
-}
-
-/* Metadata */
+/* ========================================
+   Metadata
+   ======================================== */
 
 .devlog-entry__meta {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-sm);
+  gap: 0.72rem;
 
   color: var(--document-text-muted);
+
   font-family: var(--document-font-meta);
-  font-size: 0.78rem;
-  font-weight: 500;
-  line-height: 1.45;
-  letter-spacing: 0.045em;
+  font-size: clamp(0.94rem, 0.87rem + 0.18vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.devlog-entry__separator {
+  display: block;
+  margin-block: 0.12rem;
+
+  color: var(--document-text);
+
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.devlog-entry__separator::before {
+  content: "——";
+  letter-spacing: -0.08em;
+}
+
+.devlog-entry__meta-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 
 .devlog-entry__video {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
+  justify-content: center;
+
+  color: var(--document-text-muted);
 }
 
 .devlog-entry__video svg {
-  width: 1rem;
-  height: 1rem;
+  display: block;
+  width: 1.08rem;
+  height: 1.08rem;
+
   flex: 0 0 auto;
+
   color: currentColor;
 }
 
-/* Content */
+/* ========================================
+   Content
+   ======================================== */
 
 .devlog-entry__body {
   min-width: 0;
 }
 
 .devlog-entry__body h2 {
-  margin: 0 0 var(--space-sm);
+  margin: 0 0 clamp(0.65rem, 1vw, 1rem);
 
   color: var(--document-text);
+
   font-family: var(--document-font-title);
-  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  font-size: clamp(1.55rem, 2.05vw, 2.15rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.012em;
 }
 
 .devlog-entry__body h2 a {
@@ -1055,6 +1148,7 @@ a:hover {
 .devlog-entry__body h2 a:hover,
 .devlog-entry__body h2 a:focus-visible {
   color: var(--document-link-hover);
+
   text-decoration: underline;
   text-decoration-thickness: var(--border-width);
   text-underline-offset: 0.2em;
@@ -1066,20 +1160,27 @@ a:hover {
 }
 
 .devlog-entry__body p {
-  max-width: 58ch;
+  max-width: 52ch;
   margin: 0;
 
   color: var(--document-text-muted);
+
   font-family: var(--document-font-text);
-  line-height: 1.65;
+  font-size: clamp(1rem, 0.95rem + 0.14vw, 1.12rem);
+  line-height: 1.68;
 }
 
-/* Fixed editorial crop */
+/* ========================================
+   Images
+   ======================================== */
 
 .devlog-entry__image {
   display: block;
   align-self: start;
+
+  width: 100%;
   overflow: hidden;
+
   aspect-ratio: var(--document-thumbnail-ratio);
 
   background: var(--document-rule);
@@ -1087,26 +1188,60 @@ a:hover {
 
 .devlog-entry__thumbnail {
   display: block;
+
   width: 100%;
   height: 100%;
 
   object-fit: cover;
   object-position: var(--document-image-position);
+
   filter: var(--document-image-filter);
 }
 
-/* Responsive */
+/* ========================================
+   Tablet
+   ======================================== */
 
 @media (max-width: 64rem) {
+
+  .devlog-entry,
   .devlog-entry--has-image {
-  grid-template-columns:
-    minmax(7rem, 13%)
-    minmax(0, 1fr)
-    minmax(16rem, 32%);
-}
+    gap: clamp(1.25rem, 2.4vw, 2rem);
+  }
+
+  .devlog-entry--has-image {
+    grid-template-columns:
+      minmax(7.25rem, 17%)
+      minmax(13rem, 1fr)
+      minmax(13rem, 32%);
+  }
+
+  .devlog-entry__body h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
 }
 
+@media (max-width: 52rem) {
+
+  .devlog-entry,
+  .devlog-entry--has-image {
+    grid-template-columns:
+      minmax(7rem, 20%)
+      minmax(0, 1fr);
+  }
+
+  .devlog-entry__image {
+    grid-column: 2;
+    width: min(100%, 32rem);
+  }
+}
+
+/* ========================================
+   Mobile
+   ======================================== */
+
 @media (max-width: 48rem) {
+
   .devlog-index {
     width: 100%;
     padding: var(--space-lg) var(--space-md);
@@ -1114,6 +1249,7 @@ a:hover {
 
   .devlog-index__header {
     grid-template-columns: 1fr;
+    margin-bottom: 0;
   }
 
   .devlog-index__subscriptions {
@@ -1127,20 +1263,45 @@ a:hover {
   .devlog-entry--has-image {
     grid-template-columns: 1fr;
     gap: var(--space-md);
+    padding-block: clamp(1.75rem, 8vw, 2.75rem);
   }
 
   .devlog-entry__meta {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     gap: var(--space-xs) var(--space-md);
+
+    font-size: 0.86rem;
+  }
+
+  .devlog-entry__separator {
+    display: inline;
+    margin: 0;
+  }
+
+  .devlog-entry__meta-footer {
+    display: inline-flex;
+  }
+
+  .devlog-entry__body h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .devlog-entry__body p {
+    font-size: 1rem;
   }
 
   .devlog-entry__image {
-    width: min(100%, 24rem);
+    grid-column: 1;
+    width: min(100%, 30rem);
   }
 }
 
-.devlog-index__footer {
+/********************
+ DEVLOG FOOTER
+*********************/
+ .devlog-index__footer {
   padding-top: var(--space-xl);
 }
 
