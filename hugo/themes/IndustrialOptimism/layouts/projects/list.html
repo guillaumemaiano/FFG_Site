@@ -1,0 +1,26 @@
+{{ define "main" }}
+  {{ $projects := .Pages.ByWeight }}
+
+  <main class="projects-carousel" data-project-carousel>
+    <div class="projects-carousel__track" data-project-track>
+      {{ range $projects }}
+        {{ partial "project.html" (dict "project" .) }}
+      {{ end }}
+    </div>
+
+    <nav class="projects-carousel__nav" aria-label="Projects">
+      {{ range $index, $project := $projects }}
+        <button
+          class="projects-carousel__indicator{{ if eq $index 0 }} is-active{{ end }}"
+          type="button"
+          data-project-indicator="{{ $index }}"
+          aria-label="Show {{ $project.Title }}"
+          aria-current="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+        ></button>
+      {{ end }}
+    </nav>
+  </main>
+
+  {{ $script := resources.Get "js/projects-carousel.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}

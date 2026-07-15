@@ -1,4 +1,10 @@
 {{ define "main" }}
+  <main class="project-single">
+    {{ partial "project.html" (dict "project" .) }}
+  </main>
+{{ end }}
+<!--
+{{ define "main" }}
 <div class="main-frame">
 <article class="project-page">
   <header class="project-header">
@@ -19,3 +25,4 @@
 </article>
 </div>
 {{end}}
+-->
