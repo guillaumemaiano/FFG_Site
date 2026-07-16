@@ -1415,3 +1415,36 @@ a:hover {
 .projects-carousel__indicator:focus-visible {
   background: rgb(255 255 255 / 0.55);
 }
+
+.project__title {
+  font-family: var(--project-font-title);
+}
+
+.project__tagline {
+  font-family: var(--project-font-tagline);
+}
+
+.project__cta {
+  font-family: var(--project-font-cta);
+}
+
+.projects-carousel {
+  position: relative;
+  min-height: calc(100svh - var(--site-header-height));
+  overflow: hidden;
+}
+
+.projects-carousel__track {
+  display: flex;
+  width: 100%;
+  min-height: inherit;
+  overflow-x: auto;
+}
+
+.project {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  min-height: inherit;
+  overflow: hidden;
+}

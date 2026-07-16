@@ -33,7 +33,7 @@
         {{ end }}
 
         <a class="home-entry__link" href="{{ .RelPermalink }}">
-          Explore the world
+          {{ default "Explore the world" .Params.cta }} →
         </a>
 
       </article>

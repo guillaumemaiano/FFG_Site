@@ -1,10 +1,13 @@
 {{ define "main" }}
   {{ $projects := .Pages.ByWeight }}
 
-  <main class="projects-carousel">
+  <section class="projects-carousel">
     <div class="projects-carousel__track">
       {{ range $projects }}
-        {{ partial "project.html" (dict "project" . "id" (printf "project-%s" .File.UniqueID)) }}
+        {{ partial "project.html" (dict
+          "project" .
+          "id" (printf "project-%s" .File.UniqueID)
+        ) }}
       {{ end }}
     </div>
 
@@ -17,5 +20,5 @@
         ></a>
       {{ end }}
     </nav>
-  </main>
+  </section>
 {{ end }}
