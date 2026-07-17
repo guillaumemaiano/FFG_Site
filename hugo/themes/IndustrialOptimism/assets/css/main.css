@@ -1692,3 +1692,7 @@ a:hover {
     max-width: 30ch;
   }
 }
+
+.project-dossier {
+  border-top: 1px solid var(--project-theme-color);
+}

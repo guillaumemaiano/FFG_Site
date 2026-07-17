@@ -1,0 +1,15 @@
+{{- $project := .project -}}
+
+<section
+  class="project-dossier"
+  aria-labelledby="project-dossier-title-{{ $project.File.UniqueID }}"
+>
+  <div class="site-frame project-dossier__inner">
+    {{ partial "in-dev-placeholder.html" (dict
+      "title" (printf "%s dossier" $project.Title)
+      "status" "In development"
+      "message" "This project dossier is currently under development."
+      "variant" "dossier"
+    ) }}
+  </div>
+</section>
