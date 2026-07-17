@@ -1,6 +1,7 @@
 {{- $project := .project -}}
 {{- $id := .id | default "" -}}
 {{- $image := $project.Resources.GetMatch $project.Params.cover -}}
+{{- $themeColor := $project.Params.theme_color -}}
 
 <article
   {{ with $id }}id="{{ . }}"{{ end }}
@@ -19,15 +20,9 @@
   <div class="project__shade"></div>
 
   <div class="site-frame project__content">
-    <h1 class="project__title">{{ $project.LinkTitle }}</h1>
-
-    {{ with $project.Params.tagline }}
-      <p class="project__tagline">{{ . }}</p>
-    {{ end }}
-
-    <a class="project__cta" href="{{ $project.RelPermalink }}">
-      {{ default "Enter" $project.Params.cta }}
-      <span aria-hidden="true">→</span>
-    </a>
+  {{ partial "project-header.html" (dict
+  "project" $project
+  "fullTitle" false
+) }}
   </div>
 </article>

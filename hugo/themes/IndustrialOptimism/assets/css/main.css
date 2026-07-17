@@ -1547,3 +1547,34 @@ a:hover {
     height: 2.5rem;
   }
 }
+.project__rule {
+  position: relative;
+
+  width: min(28rem, 42vw);
+  height: 1px;
+  margin-top: var(--space-lg);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--project-theme-color) 82%,
+      transparent
+    );
+}
+
+.project__rule::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 0.45rem;
+  height: 0.45rem;
+
+  border: 1px solid var(--project-theme-color);
+  background: transparent;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+}

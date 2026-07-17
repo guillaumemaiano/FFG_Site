@@ -11,6 +11,7 @@ cover = 'Finnbharr.png'
 tagline = 'A voyage of adventure, friendship and love.'
 theme_color = "#8B5A2B"   # Walnut / aged brass
 cta = 'Embark'
+description = "Step aboard Mélusine with Léon to explore the world, characters and creative vision behind The Beaumont Legacy."
 +++
 
 THIS ARTICLE IS NOT WRITTEN.
