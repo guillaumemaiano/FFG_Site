@@ -6,71 +6,66 @@
   </header>
 
   <div class="home__entries">
+{{ range first 1 (where site.RegularPages "Params.featured_home" true) }}
+  {{ $project := . }}
+  
+   <article class="home-entry home-entry--{{ .Section }}">
 
-    {{ range first 1 (where site.RegularPages "Params.featured_home" true) }}
-      <article class="home-entry home-entry--{{ .Section }}">
+      <header class="home-entry__header">
+        <p class="home-entry__type">Featured world</p>
 
-        <header class="home-entry__header">
-          <p class="home-entry__type">Featured world</p>
+        <h2 class="home-entry__title">
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h2>
+      </header>
 
-          <h2 class="home-entry__title">
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-          </h2>
-        </header>
+      {{ with  .Params.tagline  }}
+      <div class="home-entry__summary">
+        <p>{{ . }}</p>
+      </div>
+      {{ end }}
+      {{ with .Params.cover }}
+      {{ with $project.Resources.GetMatch . }}
+      <img class="home-entry__image" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+      {{ end }}
+      {{ end }}
 
-        {{ with .Description }}
-          <div class="home-entry__summary">
-            <p>{{ . }}</p>
-          </div>
-        {{ end }}
 
-        {{ with .Params.featured_image }}
-          <img
-            class="home-entry__image"
-            src="{{ . | relURL }}"
-            alt=""
-          >
-        {{ end }}
+      <a class="home-entry__link" href="{{ .RelPermalink }}">
+        {{ default "Explore the world" .Params.cta }} →
+      </a>
 
-        <a class="home-entry__link" href="{{ .RelPermalink }}">
-          Explore the world
-        </a>
-
-      </article>
+    </article>
     {{ end }}
 
     {{ range first 1 (where site.RegularPages "Section" "journal") }}
-      <article class="home-entry home-entry--journal">
+    <article class="home-entry home-entry--journal">
 
-        <header class="home-entry__header">
-          <p class="home-entry__type">
-            Devlog {{ with .Params.journal_number }}#{{ . }}{{ end }}
-          </p>
+      <header class="home-entry__header">
+        <p class="home-entry__type">
+          Devlog {{ with .Params.journal_number }}#{{ . }}{{ end }}
+        </p>
 
-          <h2 class="home-entry__title">
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-          </h2>
-        </header>
+        <h2 class="home-entry__title">
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h2>
+      </header>
 
-        {{ with .Description }}
-          <div class="home-entry__summary">
-            <p>{{ . }}</p>
-          </div>
-        {{ end }}
+      {{ with .Description }}
+      <div class="home-entry__summary">
+        <p>{{ . }}</p>
+      </div>
+      {{ end }}
 
-        {{ with .Params.featured_image }}
-          <img
-            class="home-entry__image"
-            src="{{ . | relURL }}"
-            alt=""
-          >
-        {{ end }}
+      {{ with .Params.featured_image }}
+      <img class="home-entry__image" src="{{ . | relURL }}" alt="">
+      {{ end }}
 
-        <a class="home-entry__link" href="{{ .RelPermalink }}">
-          Read the devlog
-        </a>
+      <a class="home-entry__link" href="{{ .RelPermalink }}">
+        Read the devlog
+      </a>
 
-      </article>
+    </article>
     {{ end }}
 
   </div>

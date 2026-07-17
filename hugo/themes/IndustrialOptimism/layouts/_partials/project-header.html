@@ -1,0 +1,18 @@
+{{- $project := .project -}}
+{{- $useFullTitle := .fullTitle | default false -}}
+
+<header class="project-heading">
+  <h1 class="project__title">
+    {{ if $useFullTitle }}
+      {{ $project.Title }}
+    {{ else }}
+      {{ $project.LinkTitle }}
+    {{ end }}
+  </h1>
+
+  <div class="project__rule" aria-hidden="true"></div>
+
+  {{ with $project.Params.tagline }}
+    <p class="project__tagline">{{ . }}</p>
+  {{ end }}
+</header>

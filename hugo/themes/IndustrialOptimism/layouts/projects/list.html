@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ $projects := .Pages.ByWeight }}
+
+  <section class="projects-carousel">
+    <div class="projects-carousel__track">
+      {{ range $projects }}
+        {{ partial "project.html" (dict
+          "project" .
+          "id" (printf "project-%s" .File.UniqueID)
+        ) }}
+      {{ end }}
+    </div>
+
+    <nav class="projects-carousel__nav" aria-label="Projects">
+      {{ range $projects }}
+        <a
+          class="projects-carousel__indicator"
+          href="#project-{{ .File.UniqueID }}"
+          aria-label="Show {{ .Title }}"
+        ></a>
+      {{ end }}
+    </nav>
+  </section>
+{{ end }}

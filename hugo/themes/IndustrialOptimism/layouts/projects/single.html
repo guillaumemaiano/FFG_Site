@@ -1,21 +1,18 @@
 {{ define "main" }}
-<div class="main-frame">
-<article class="project-page">
-  <header class="project-header">
-    <h1>{{ .Title }}</h1>
+<article class="project-article">
+  <header class="project-article__header">
+    {{ partial "project-header.html" (dict
+    "project" .
+    "fullTitle" true
+    ) }}
 
-    {{ with .Params.status }}
-      <p class="project-status">{{ . }}</p>
-    {{ end }}
-
-    {{ with .Params.summary }}
-      <p class="project-summary">{{ . }}</p>
+    {{ with .Description }}
+    <p class="project-article__description">{{ . }}</p>
     {{ end }}
   </header>
 
-  <section class="project-content">
+  <div class="project-article__content">
     {{ .Content }}
-  </section>
+  </div>
 </article>
-</div>
-{{end}}
+{{ end }}

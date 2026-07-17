@@ -51,29 +51,23 @@
      BORDERS
      ======================================== */
 
-  --border-base: color-mix(
-    in srgb,
-    var(--color-midnight-blue) 18%,
-    transparent
-  );
+  --border-base: color-mix(in srgb,
+      var(--color-midnight-blue) 18%,
+      transparent);
 
-  --border-interactive: color-mix(
-    in srgb,
-    var(--color-midnight-blue) 12%,
-    transparent
-  );
+  --border-interactive: color-mix(in srgb,
+      var(--color-midnight-blue) 12%,
+      transparent);
 
-  --border-highlight: color-mix(
-    in srgb,
-    var(--color-brass) 40%,
-    transparent
-  );
-/***********************
+  --border-highlight: color-mix(in srgb,
+      var(--color-brass) 40%,
+      transparent);
+  /***********************
 IMAGE TREATMENT
 ////////////////////////////*/
---document-image-filter: grayscale(100%);
---document-image-position: left top;
---document-thumbnail-ratio: 7 / 3;
+  --document-image-filter: grayscale(100%);
+  --document-image-position: left top;
+  --document-thumbnail-ratio: 7 / 3;
   /* ========================================
      TYPOGRAPHY
      ======================================== */
@@ -93,6 +87,10 @@ IMAGE TREATMENT
     "Segoe UI",
     sans-serif;
 
+  --font-project-tagline:
+    "Source Sans 3",
+    sans-serif;
+
   --font-code:
     "IBM Plex Mono",
     "Cascadia Code",
@@ -102,6 +100,11 @@ IMAGE TREATMENT
   --document-font-title: var(--font-body);
   --document-font-text: var(--font-body);
   --document-font-meta: var(--font-code);
+
+  /* Project roles */
+  --project-font-title: var(--font-heading);
+  --project-font-tagline: var(--font-project-tagline);
+  --project-font-cta: var(--font-code);
 
   /* ========================================
      TYPE SCALE
@@ -166,6 +169,7 @@ IMAGE TREATMENT
   --ease-out: 120ms ease-out;
   --ease-in-out: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Font definitions */
 
 /* ===== IBM Plex Mono ===== */
