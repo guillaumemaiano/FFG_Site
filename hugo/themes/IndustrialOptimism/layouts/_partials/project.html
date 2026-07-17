@@ -6,6 +6,7 @@
 <article
   {{ with $id }}id="{{ . }}"{{ end }}
   class="project"
+  style="--project-theme-color: {{ $themeColor }};"
 >
   {{ with $image }}
     <img
