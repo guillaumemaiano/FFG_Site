@@ -1578,3 +1578,117 @@ a:hover {
     translate(-50%, -50%)
     rotate(45deg);
 }
+/* ========================================
+   IN-DEVELOPMENT PLACEHOLDER
+   ======================================== */
+
+.in-dev-placeholder {
+  min-height: calc(100svh - var(--site-header-height));
+  display: grid;
+  align-items: center;
+
+  padding-block:
+    clamp(var(--space-2xl), 10vh, var(--space-3xl));
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0 68%,
+      color-mix(in srgb, var(--accent-primary) 8%, transparent) 68% 69%,
+      transparent 69% 100%
+    ),
+    var(--surface-page);
+}
+
+.in-dev-placeholder__inner {
+  position: relative;
+  max-width: 52rem;
+}
+
+.in-dev-placeholder__inner::before {
+  content: "";
+  display: block;
+
+  width: min(28rem, 72vw);
+  height: 1px;
+  margin-bottom: var(--space-xl);
+
+  background: var(--accent-primary);
+}
+
+.in-dev-placeholder__eyebrow {
+  margin: 0 0 var(--space-lg);
+
+  color: var(--accent-primary);
+
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.in-dev-placeholder__title {
+  max-width: 12ch;
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.in-dev-placeholder__status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  margin: var(--space-xl) 0 0;
+  padding: var(--space-xs) var(--space-sm);
+
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.in-dev-placeholder__status::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+.in-dev-placeholder__message {
+  max-width: 42rem;
+  margin: var(--space-xl) 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: clamp(1.125rem, 2vw, 1.4rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 48rem) {
+  .in-dev-placeholder {
+    align-items: start;
+    padding-block: var(--space-2xl);
+  }
+
+  .in-dev-placeholder__title {
+    font-size: clamp(2.75rem, 16vw, 4.75rem);
+  }
+
+  .in-dev-placeholder__message {
+    max-width: 30ch;
+  }
+}
