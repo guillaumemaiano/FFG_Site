@@ -1718,13 +1718,11 @@ a:hover {
 
 .project-dossier__inner {
   display: grid;
-  grid-template-rows: 4rem minmax(0, 1fr) 4rem;
-
+  grid-template-rows: 4rem minmax(0, 1fr);
   height: 100%;
 }
 
-.project-dossier__top-cue,
-.project-dossier__bottom-cue {
+.project-dossier__top-cue {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1754,7 +1752,10 @@ a:hover {
 
 .project-dossier__track {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    minmax(0, 20%)
+    minmax(0, 60%)
+    minmax(0, 20%);
 
   width: 100%;
   height: 100%;
@@ -1776,11 +1777,6 @@ a:hover {
     );
 }
 
-/*
-The generic placeholder normally occupies an entire page.
-Inside a dossier panel, it must instead fill only its panel.
-*/
-
 .project-dossier .in-dev-placeholder {
   min-height: 100%;
   height: 100%;
@@ -1793,4 +1789,76 @@ Inside a dossier panel, it must instead fill only its panel.
 .project-dossier .in-dev-placeholder__inner {
   width: 100%;
   max-width: none;
+}
+.project__dossier-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  z-index: 2;
+
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+
+  padding: 2.5rem 1rem 0.5rem;
+  color: inherit;
+  text-decoration: none;
+
+  transform: translateX(-50%);
+}
+
+.project__dossier-cue::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      ellipse at bottom,
+      rgb(255 255 255 / 0.18),
+      transparent 68%
+    );
+
+  opacity: 0.35;
+  animation: dossier-cue-pulse 3s ease-in-out infinite;
+}
+
+.project__dossier-cue span:first-child {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.project__dossier-cue span:last-child {
+  font-size: 1.25rem;
+  animation: dossier-cue-drift 3s ease-in-out infinite;
+}
+
+@keyframes dossier-cue-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes dossier-cue-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0.4rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project__dossier-cue::before,
+  .project__dossier-cue span:last-child {
+    animation: none;
+  }
 }
