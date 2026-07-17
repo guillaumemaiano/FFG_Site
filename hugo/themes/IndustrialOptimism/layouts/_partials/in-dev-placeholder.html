@@ -1,0 +1,27 @@
+{{- $title := .title | default "In development" -}}
+{{- $step := .step | default "Step 19" -}}
+{{- $phase := .phase | default "Phase V — Content Templates" -}}
+{{- $message := .message | default "This section is currently being developed as part of the Flying Fortress Games website roadmap." -}}
+
+<section class="in-dev-placeholder" aria-labelledby="in-dev-placeholder-title">
+  <div class="site-frame in-dev-placeholder__inner">
+    <p class="in-dev-placeholder__eyebrow">
+      {{ $step }} · {{ $phase }}
+    </p>
+
+    <h1
+      id="in-dev-placeholder-title"
+      class="in-dev-placeholder__title"
+    >
+      {{ $title }}
+    </h1>
+
+    <p class="in-dev-placeholder__status">
+      In development
+    </p>
+
+    <p class="in-dev-placeholder__message">
+      {{ $message }}
+    </p>
+  </div>
+</section>

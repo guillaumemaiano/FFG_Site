@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ partial "in-dev-placeholder.html" (dict
+    "title" .Title
+    "step" .Params.roadmap_step
+    "phase" .Params.roadmap_phase
+    "message" .Params.placeholder_message
+  ) }}
+{{ end }}
