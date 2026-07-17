@@ -1,8 +1,10 @@
 {{- $project := .project -}}
+{{- $uid := $project.File.UniqueID -}}
 
 <section
+  id="project-dossier-{{ $uid }}"
   class="project-dossier"
-  aria-labelledby="project-dossier-title-{{ $project.File.UniqueID }}"
+  aria-label="{{ $project.Title }} dossier"
 >
   <div class="site-frame project-dossier__inner">
     {{ partial "in-dev-placeholder.html" (dict
