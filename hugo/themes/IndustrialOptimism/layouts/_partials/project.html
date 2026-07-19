@@ -11,7 +11,11 @@
     {{ end }}
 
     <div class="project__shade"></div>
-
+    <a class="project__nav project__nav--down" href="#project-dossier-bottom-{{ $uid }}"
+      aria-label="Jump to the end of the project dossier">
+      <span aria-hidden="true">◇</span>
+      <span aria-hidden="true">↓</span>
+    </a>
     <div class="site-frame project__content">
       {{ partial "project-header.html" (dict
       "project" $project
@@ -19,10 +23,6 @@
       ) }}
     </div>
   </div>
-  <a class="project__dossier-cue" href="#project-dossier-{{ $uid }}" aria-label="Explore the project dossier">
-    <span aria-hidden="true">◇</span>
-    <span aria-hidden="true">↓</span>
-  </a>
 
   {{ partial "project-dossier.html" (dict
   "project" $project
