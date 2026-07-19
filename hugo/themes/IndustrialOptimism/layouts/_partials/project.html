@@ -4,7 +4,7 @@
 {{- $themeColor := $project.Params.theme_color -}}
 {{- $uid := $project.File.UniqueID -}}
 
-<article {{ with $id }}id="{{ . }}" {{ end }} class="project" style="--project-theme-color: {{ $themeColor }};">
+<article {{ with $id }}id="{{ . }}" {{ end }}   id="{{ $uid }}" class="project" style="--project-theme-color: {{ $themeColor }};">
   <div class="project__hero">
     {{ with $image }}
     <img class="project__image" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">

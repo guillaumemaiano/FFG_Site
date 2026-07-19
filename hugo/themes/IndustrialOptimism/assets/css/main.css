@@ -1862,3 +1862,7 @@ a:hover {
     animation: none;
   }
 }
+.project-dossier__inner {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+}

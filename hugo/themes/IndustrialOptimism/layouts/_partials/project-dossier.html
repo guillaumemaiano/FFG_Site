@@ -8,11 +8,6 @@
 >
   <div class="project-dossier__inner">
 
-    <div class="project-dossier__top-cue">
-      <span aria-hidden="true">↑</span>
-      <span>Return to project</span>
-    </div>
-
     <div class="project-dossier__viewport">
       <div class="project-dossier__track">
 
@@ -42,6 +37,16 @@
 
       </div>
     </div>
-
+<div class="project-dossier__nav">
+  <a
+    id="project-dossier-bottom-{{ $uid }}"
+    class="project-dossier__nav-link"
+    href="#{{ $uid }}"
+    aria-label="Return to the project"
+  >
+    <span aria-hidden="true">↑</span>
+    <span aria-hidden="true">◇</span>
+  </a>
+</div>
   </div>
 </section>
