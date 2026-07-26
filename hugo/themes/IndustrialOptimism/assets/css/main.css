@@ -1765,24 +1765,58 @@ a:hover {
   width: 100%;
   max-width: none;
 }
-.project__dossier-cue {
-  position: absolute;
-  left: 50%;
-  bottom: 1.25rem;
+
+.project-dossier__inner {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    height: 100%;
+}
+/* ========================================
+   PROJECT VERTICAL NAVIGATION
+
+   @BORIS:
+   This styling deliberately targets the CURRENT HTML:
+     .project__nav.project__nav--down
+     .project-dossier__nav-link
+
+   Before replacing these with a generic cue component, read the branch
+   commits and inspect both project.html and project-dossier.html.
+   Down and up are separate controls with different placement and symbol order.
+   ======================================== */
+
+.project__nav--down,
+.project-dossier__nav-link {
+  position: relative;
   z-index: 2;
 
   display: grid;
   justify-items: center;
   gap: 0.2rem;
 
-  padding: 2.5rem 1rem 0.5rem;
-  color: inherit;
-  text-decoration: none;
+  width: max-content;
+  padding: 0.75rem 1rem;
 
+  color: var(--project-theme-color);
+  text-decoration: none;
+}
+
+.project__nav--down {
+  position: absolute;
+  left: 50%;
+  bottom: calc(
+    100svh - var(--site-header-height) + 1.25rem
+  );
   transform: translateX(-50%);
 }
 
-.project__dossier-cue::before {
+.project-dossier__nav {
+  display: grid;
+  place-items: center;
+  min-height: 4rem;
+}
+
+.project__nav--down::before,
+.project-dossier__nav-link::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1790,26 +1824,35 @@ a:hover {
 
   background:
     radial-gradient(
-      ellipse at bottom,
+      ellipse at center,
       rgb(255 255 255 / 0.18),
       transparent 68%
     );
 
   opacity: 0.35;
-  animation: dossier-cue-pulse 3s ease-in-out infinite;
+  animation: project-nav-pulse 3s ease-in-out infinite;
 }
 
-.project__dossier-cue span:first-child {
+.project__nav--down span:first-child,
+.project-dossier__nav-link span:last-child {
   font-size: 0.8rem;
   opacity: 0.65;
 }
 
-.project__dossier-cue span:last-child {
+.project__nav--down span:last-child,
+.project-dossier__nav-link span:first-child {
   font-size: 1.25rem;
-  animation: dossier-cue-drift 3s ease-in-out infinite;
 }
 
-@keyframes dossier-cue-pulse {
+.project__nav--down span:last-child {
+  animation: project-nav-drift-down 3s ease-in-out infinite;
+}
+
+.project-dossier__nav-link span:first-child {
+  animation: project-nav-drift-up 3s ease-in-out infinite;
+}
+
+@keyframes project-nav-pulse {
   0%,
   100% {
     opacity: 0.2;
@@ -1820,7 +1863,7 @@ a:hover {
   }
 }
 
-@keyframes dossier-cue-drift {
+@keyframes project-nav-drift-down {
   0%,
   100% {
     transform: translateY(0);
@@ -1831,43 +1874,22 @@ a:hover {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .project__dossier-cue::before,
-  .project__dossier-cue span:last-child {
-    animation: none;
+@keyframes project-nav-drift-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.4rem);
   }
 }
-.project-dossier__inner {
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto;
-}
 
-.project-cue {
-  display: grid;
-  justify-items: center;
-  gap: 0.2rem;
-
-  width: max-content;
-  margin-inline: auto;
-  padding: 0.75rem 1rem;
-
-  color: var(--project-theme-color);
-  text-decoration: none;
-}
-
-.project-cue span:first-child {
-  font-size: 0.8rem;
-  opacity: 0.65;
-}
-
-.project-cue span:last-child {
-  font-size: 1.25rem;
-}
-
-.project-cue--down span:last-child {
-  animation: dossier-cue-drift-down 3s ease-in-out infinite;
-}
-
-.project-cue--up span:first-child {
-  animation: dossier-cue-drift-up 3s ease-in-out infinite;
+@media (prefers-reduced-motion: reduce) {
+  .project__nav--down::before,
+  .project-dossier__nav-link::before,
+  .project__nav--down span:last-child,
+  .project-dossier__nav-link span:first-child {
+    animation: none;
+  }
 }
