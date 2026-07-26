@@ -221,7 +221,7 @@ a:hover {
   width: 100%;
   max-width: var(--article-width);
   height: auto;
-  margin: var(--space-lg) auto;
+  margin: var(--space-xl) auto;
 }
 /* ========================================
    SITE FRAME
@@ -420,11 +420,6 @@ a:hover {
   border: var(--border-width) solid var(--accent-primary);
   border-radius: var(--radius-sm);
   box-shadow: var(--elevation-2);
-}
-
-.journal-image {
-  max-width: var(--article-width);
-  margin: var(--space-xl) auto;
 }
 
 /* Code Blocks — Technical Documentation */
@@ -1716,26 +1711,6 @@ a:hover {
   color: var(--text-primary);
 }
 
-.project-dossier__inner {
-  display: grid;
-  grid-template-rows: 4rem minmax(0, 1fr);
-  height: 100%;
-}
-
-.project-dossier__top-cue {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-
-  color: var(--project-theme-color);
-
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .project-dossier__viewport {
   min-width: 0;
   min-height: 0;
@@ -1865,4 +1840,34 @@ a:hover {
 .project-dossier__inner {
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.project-cue {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+
+  width: max-content;
+  margin-inline: auto;
+  padding: 0.75rem 1rem;
+
+  color: var(--project-theme-color);
+  text-decoration: none;
+}
+
+.project-cue span:first-child {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.project-cue span:last-child {
+  font-size: 1.25rem;
+}
+
+.project-cue--down span:last-child {
+  animation: dossier-cue-drift-down 3s ease-in-out infinite;
+}
+
+.project-cue--up span:first-child {
+  animation: dossier-cue-drift-up 3s ease-in-out infinite;
 }
