@@ -1728,9 +1728,9 @@ a:hover {
 .project-dossier__track {
   display: grid;
   grid-template-columns:
-    minmax(0, 20%)
-    minmax(0, 60%)
-    minmax(0, 20%);
+    minmax(0, 10%)
+    minmax(0, 80%)
+    minmax(0, 10%);
 
   width: 100%;
   height: 100%;
@@ -1956,4 +1956,49 @@ a:hover {
   outline-offset: 4px;
 
   background: var(--surface-page);
+}
+/* Side-glass content */
+.project-dossier__panel:is(
+  .project-dossier__panel--previous,
+  .project-dossier__panel--next
+) > * {
+  filter: blur(4px) brightness(0.55) saturate(0.75);
+  transform: scale(1.04); /* hides blurred edges */
+  transition: filter 240ms ease, transform 240ms ease;
+}
+
+/* Sharp rail foundation */
+.project-dossier__panel--previous,
+.project-dossier__panel--next {
+  position: relative;
+}
+
+.project-dossier__panel--previous::after,
+.project-dossier__panel--next::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  z-index: 2;
+  width: 7px;
+  pointer-events: none;
+}
+
+.project-dossier__panel--previous::after {
+  right: 0;
+  background:
+    linear-gradient(25deg,
+      var(--project-theme-color),
+      color-mix(in srgb, var(--project-theme-color) 55%, white)
+    ) left / 4px 100% no-repeat,
+    var(--accent-primary) right / 3px 100% no-repeat;
+}
+
+.project-dossier__panel--next::before {
+  left: 0;
+  background:
+    var(--accent-primary) left / 3px 100% no-repeat,
+    linear-gradient(25deg,
+      var(--project-theme-color),
+      color-mix(in srgb, var(--project-theme-color) 55%, white)
+    ) right / 4px 100% no-repeat;
 }
