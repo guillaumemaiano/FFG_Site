@@ -5,6 +5,7 @@ draft = false
 title = "Subrosa"
 linkTitle = "Subrosa"
 weight = 20
+visual_tone = dark
 
 cover = 'game-concept.png'
 tagline = "Secrets are never truly buried."

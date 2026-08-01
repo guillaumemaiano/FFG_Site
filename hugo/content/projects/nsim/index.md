@@ -4,6 +4,7 @@ draft = false
 
 title = 'NSIM'
 weight = 30
+visual_tone = light
 
 cover = 'NSIM-concept.png'
 tagline = 'A college kid in a whimsical NYC.'
