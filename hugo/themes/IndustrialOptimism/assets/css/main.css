@@ -1605,9 +1605,10 @@ a:hover {
     var(--surface-page);
 }
 
-.in-dev-placeholder__inner {
-  position: relative;
-  max-width: 52rem;
+.project-dossier__panel--previous .in-dev-placeholder__inner,
+.project-dossier__panel--next .in-dev-placeholder__inner {
+  width: 100%;
+  max-width: none;
 }
 
 .in-dev-placeholder__inner::before {
@@ -1759,11 +1760,6 @@ a:hover {
   padding-block: var(--space-xl);
 
   background: transparent;
-}
-
-.project-dossier .in-dev-placeholder__inner {
-  width: 100%;
-  max-width: none;
 }
 
 .project-dossier__inner {
@@ -1996,8 +1992,12 @@ a:hover {
 .project-dossier__panel--next::before {
   left: 0;
   background:
-    var(--accent-primary) left / 3px 100% no-repeat,
-    linear-gradient(25deg,
+    linear-gradient(
+      var(--accent-primary),
+      var(--accent-primary)
+    ) left / 3px 100% no-repeat,
+    linear-gradient(
+      25deg,
       var(--project-theme-color),
       color-mix(in srgb, var(--project-theme-color) 55%, white)
     ) right / 4px 100% no-repeat;
