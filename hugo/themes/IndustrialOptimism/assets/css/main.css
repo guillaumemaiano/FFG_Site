@@ -1488,17 +1488,6 @@ a:hover {
   outline-offset: 4px;
 }
 
-.projects-carousel__nav {
-  position: absolute;
-  top: 50%;
-  right: 1.5rem;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transform: translateY(-50%);
-}
-
 .projects-carousel__indicator {
   display: block;
   width: 0.3rem;
@@ -1542,10 +1531,6 @@ a:hover {
   .project__tagline {
     max-width: 26ch;
     font-size: var(--text-lg);
-  }
-
-  .projects-carousel__nav {
-    right: var(--space-sm);
   }
 
   .projects-carousel__indicator {
