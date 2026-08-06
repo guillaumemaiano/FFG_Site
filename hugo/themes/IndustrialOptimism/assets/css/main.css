@@ -1931,14 +1931,11 @@ a:hover {
   cursor: pointer;
 
   transition:
-    width var(--ease-out),
     background-color var(--ease-out),
-    box-shadow var(--ease-out),
-    transform var(--ease-out);
+    box-shadow var(--ease-out);
 }
 
 .projects-carousel__indicator:hover {
-  width: 0.45rem;
 
   background:
     color-mix(
@@ -1946,8 +1943,6 @@ a:hover {
       var(--surface-page) 68%,
       transparent
     );
-
-  transform: scaleY(1.05);
 }
 
 .projects-carousel__indicator:focus-visible {
