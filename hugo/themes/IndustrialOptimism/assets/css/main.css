@@ -1940,7 +1940,7 @@ a:hover {
   background:
     color-mix(
       in srgb,
-      var(--surface-page) 68%,
+      var(--indicator-theme-color) 68%,
       transparent
     );
 }
