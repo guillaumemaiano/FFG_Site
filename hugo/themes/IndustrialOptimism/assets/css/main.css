@@ -1962,7 +1962,10 @@ a:hover {
   .project-dossier__panel--previous,
   .project-dossier__panel--next
 ) > * {
-  filter: blur(4px) brightness(0.55) saturate(0.75);
+  filter:
+  blur(4px)
+  brightness(var(--glass-brightness))
+  saturate(0.75);
   transform: scale(1.04); /* hides blurred edges */
   transition: filter 240ms ease, transform 240ms ease;
 }
@@ -2027,4 +2030,22 @@ a:hover {
   .project-dossier__panel--next {
     display: none;
   }
+}
+
+.project-dossier__panel--previous,
+.project-dossier__panel--next {
+  position: relative;
+  isolation: isolate;
+}
+
+.project-dossier__panel--previous::before,
+.project-dossier__panel--next::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: rgb(5 14 23 / var(--glass-dim-opacity));
+
+  pointer-events: none;
 }
