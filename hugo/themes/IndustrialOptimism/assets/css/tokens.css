@@ -136,6 +136,7 @@ IMAGE TREATMENT
 
   --content-width: 72rem;
   --article-width: 44rem;
+  --project-hero-height: 88svh;
 
   /* ========================================
      BORDERS AND RADII
@@ -168,6 +169,21 @@ IMAGE TREATMENT
 
   --ease-out: 120ms ease-out;
   --ease-in-out: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/********** HERO **********/
+/* Medium */
+@media (max-width: 64rem) {
+  :root {
+    --project-hero-height: 82svh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  :root {
+    --project-hero-height: 78svh;
+  }
 }
 
 /* Font definitions */
