@@ -6,6 +6,7 @@ title = 'The Beaumont Legacy'
 linkTitle = 'Beaumont'
 weight = 10
 featured_home = true
+visual_tone = 'light'
 
 cover = 'Finnbharr.png'
 tagline = 'A voyage of adventure, friendship and love.'

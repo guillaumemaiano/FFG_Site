@@ -6,12 +6,47 @@
   class="project-dossier"
   aria-label="{{ $project.Title }} dossier"
 >
-  <div class="site-frame project-dossier__inner">
-    {{ partial "in-dev-placeholder.html" (dict
-      "title" (printf "%s dossier" $project.Title)
-      "status" "In development"
-      "message" "This project dossier is currently under development."
-      "variant" "dossier"
-    ) }}
+  <div class="project-dossier__inner">
+
+    <div class="project-dossier__viewport">
+      <div class="project-dossier__track">
+
+        <div class="project-dossier__panel project-dossier__panel--previous">
+          {{ partial "in-dev-placeholder.html" (dict
+            "id" (printf "project-dossier-previous-title-%s" $uid)
+            "title" "Previous section"
+            "message" "This dossier section is currently under development."
+          ) }}
+        </div>
+
+        <div class="project-dossier__panel project-dossier__panel--active">
+          {{ partial "in-dev-placeholder.html" (dict
+            "id" (printf "project-dossier-main-title-%s" $uid)
+            "title" (printf "%s dossier" $project.Title)
+            "message" "This project dossier is currently under development."
+          ) }}
+        </div>
+
+        <div class="project-dossier__panel project-dossier__panel--next">
+          {{ partial "in-dev-placeholder.html" (dict
+            "id" (printf "project-dossier-next-title-%s" $uid)
+            "title" "Next section"
+            "message" "This dossier section is currently under development."
+          ) }}
+        </div>
+
+      </div>
+    </div>
+<div class="project-dossier__nav">
+  <a
+    id="project-dossier-bottom-{{ $uid }}"
+    class="project-dossier__nav-link"
+    href="#project-top-{{ $uid }}"
+    aria-label="Return to the project"
+  >
+    <span aria-hidden="true">↑</span>
+    <span aria-hidden="true">◇</span>
+  </a>
+</div>
   </div>
 </section>

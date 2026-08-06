@@ -221,7 +221,7 @@ a:hover {
   width: 100%;
   max-width: var(--article-width);
   height: auto;
-  margin: var(--space-lg) auto;
+  margin: var(--space-xl) auto;
 }
 /* ========================================
    SITE FRAME
@@ -420,11 +420,6 @@ a:hover {
   border: var(--border-width) solid var(--accent-primary);
   border-radius: var(--radius-sm);
   box-shadow: var(--elevation-2);
-}
-
-.journal-image {
-  max-width: var(--article-width);
-  margin: var(--space-xl) auto;
 }
 
 /* Code Blocks — Technical Documentation */
@@ -1391,15 +1386,25 @@ a:hover {
 .project {
   position: relative;
   isolation: isolate;
-  display: grid;
-  align-items: end;
+
   flex: 0 0 100%;
   min-width: 0;
-  min-height: inherit;
-  overflow: hidden;
-  color: var(--surface-page);
+
+  overflow: visible;
+
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+.project__hero {
+  position: relative;
+
+  display: grid;
+  align-items: end;
+
+  height: calc(100svh - var(--site-header-height));
+
+  overflow: hidden;
 }
 
 .project__image {
@@ -1483,24 +1488,6 @@ a:hover {
   outline-offset: 4px;
 }
 
-.projects-carousel__nav {
-  position: absolute;
-  top: 50%;
-  right: 1.5rem;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transform: translateY(-50%);
-}
-
-.projects-carousel__indicator {
-  display: block;
-  width: 0.3rem;
-  height: 3.5rem;
-  background: rgb(255 255 255 / 0.18);
-}
-
 .projects-carousel__indicator:hover,
 .projects-carousel__indicator:focus-visible {
   background: rgb(255 255 255 / 0.55);
@@ -1537,10 +1524,6 @@ a:hover {
   .project__tagline {
     max-width: 26ch;
     font-size: var(--text-lg);
-  }
-
-  .projects-carousel__nav {
-    right: var(--space-sm);
   }
 
   .projects-carousel__indicator {
@@ -1599,10 +1582,15 @@ a:hover {
     ),
     var(--surface-page);
 }
-
 .in-dev-placeholder__inner {
   position: relative;
   max-width: 52rem;
+}
+
+.project-dossier__panel--previous .in-dev-placeholder__inner,
+.project-dossier__panel--next .in-dev-placeholder__inner {
+  width: 100%;
+  max-width: none;
 }
 
 .in-dev-placeholder__inner::before {
@@ -1693,6 +1681,344 @@ a:hover {
   }
 }
 
+/* ========================================
+   PROJECT DOSSIER
+   Structural viewport
+   ======================================== */
+
 .project-dossier {
+  height: calc(100svh - var(--site-header-height));
+
   border-top: 1px solid var(--project-theme-color);
+  background: var(--surface-page);
+  color: var(--text-primary);
+}
+
+.project-dossier__viewport {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  border-block:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--project-theme-color) 45%,
+      transparent
+    );
+}
+
+.project-dossier__track {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 10%)
+    minmax(0, 80%)
+    minmax(0, 10%);
+
+  width: 100%;
+  height: 100%;
+}
+
+.project-dossier__panel {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.project-dossier__panel + .project-dossier__panel {
+  border-left:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--project-theme-color) 30%,
+      transparent
+    );
+}
+
+.project-dossier .in-dev-placeholder {
+  min-height: 100%;
+  height: 100%;
+
+  padding-block: var(--space-xl);
+
+  background: transparent;
+}
+
+.project-dossier__inner {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    height: 100%;
+}
+/* ========================================
+   PROJECT VERTICAL NAVIGATION
+
+   @BORIS:
+   This styling deliberately targets the CURRENT HTML:
+     .project__nav.project__nav--down
+     .project-dossier__nav-link
+
+   Before replacing these with a generic cue component, read the branch
+   commits and inspect both project.html and project-dossier.html.
+   Down and up are separate controls with different placement and symbol order.
+   ======================================== */
+
+.project__nav--down,
+.project-dossier__nav-link {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+
+  width: max-content;
+  padding: 0.75rem 1rem;
+
+  color: var(--project-theme-color);
+  text-decoration: none;
+}
+
+.project__nav--down {
+  position: absolute;
+  left: 50%;
+  bottom: calc(
+    100svh - var(--site-header-height) + 1.25rem
+  );
+  transform: translateX(-50%);
+}
+
+.project-dossier__nav {
+  display: grid;
+  place-items: center;
+  min-height: 4rem;
+}
+
+.project__nav--down::before,
+.project-dossier__nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgb(255 255 255 / 0.18),
+      transparent 68%
+    );
+
+  opacity: 0.35;
+  animation: project-nav-pulse 3s ease-in-out infinite;
+}
+
+.project__nav--down span:first-child,
+.project-dossier__nav-link span:last-child {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.project__nav--down span:last-child,
+.project-dossier__nav-link span:first-child {
+  font-size: 1.25rem;
+}
+
+.project__nav--down span:last-child {
+  animation: project-nav-drift-down 3s ease-in-out infinite;
+}
+
+.project-dossier__nav-link span:first-child {
+  animation: project-nav-drift-up 3s ease-in-out infinite;
+}
+
+@keyframes project-nav-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes project-nav-drift-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0.4rem);
+  }
+}
+
+@keyframes project-nav-drift-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.4rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project__nav--down::before,
+  .project-dossier__nav-link::before,
+  .project__nav--down span:last-child,
+  .project-dossier__nav-link span:first-child {
+    animation: none;
+  }
+}
+/* ========================================
+   PROJECTS — LATERAL NAVIGATION
+   ======================================== */
+
+.projects-carousel__nav {
+  position: absolute;
+  top: calc(var(--project-hero-height) / 2);
+  right: clamp(var(--space-sm), 2vw, var(--space-lg));
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+
+  padding: 0.6rem 0.45rem;
+
+  transform: translateY(-50%);
+}
+
+.projects-carousel__indicator {
+  display: block;
+  width: 0.3rem;
+  height: 2.75rem;
+  box-shadow:
+    1.8px 0.85px 2px rgb(5 14 23 / 0.70);
+  border: 0;
+  background:
+    color-mix(
+      in srgb,
+      var(--surface-page) 24%,
+      transparent
+    );
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--ease-out),
+    box-shadow var(--ease-out);
+}
+
+.projects-carousel__indicator:hover {
+
+  background:
+    color-mix(
+      in srgb,
+      var(--indicator-theme-color) 68%,
+      transparent
+    );
+}
+
+.projects-carousel__indicator:focus-visible {
+  width: 0.45rem;
+
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+
+  background: var(--surface-page);
+}
+/* Side-glass content */
+.project-dossier__panel:is(
+  .project-dossier__panel--previous,
+  .project-dossier__panel--next
+) > * {
+  filter:
+  blur(4px)
+  brightness(var(--glass-brightness))
+  saturate(0.75);
+  transform: scale(1.04); /* hides blurred edges */
+  transition: filter 240ms ease, transform 240ms ease;
+}
+
+/* Sharp rail foundation */
+.project-dossier__panel--previous,
+.project-dossier__panel--next {
+  position: relative;
+}
+
+.project-dossier__panel--previous::after,
+.project-dossier__panel--next::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  z-index: 2;
+  width: 7px;
+  pointer-events: none;
+}
+
+.project-dossier__panel--previous::after {
+  right: 0;
+  background:
+    linear-gradient(25deg,
+      var(--project-theme-color),
+      color-mix(in srgb, var(--project-theme-color) 55%, white)
+    ) left / 4px 100% no-repeat,
+    var(--accent-primary) right / 3px 100% no-repeat;
+}
+
+.project-dossier__panel--next::before {
+  left: 0;
+  background:
+    linear-gradient(
+      var(--accent-primary),
+      var(--accent-primary)
+    ) left / 3px 100% no-repeat,
+    linear-gradient(
+      25deg,
+      var(--project-theme-color),
+      color-mix(in srgb, var(--project-theme-color) 55%, white)
+    ) right / 4px 100% no-repeat;
+}
+
+.project[data-visual-tone="light"] {
+  --glass-brightness: 0.82;
+  --glass-dim-opacity: 0.10;
+}
+
+.project[data-visual-tone="dark"] {
+  --glass-brightness: 0.94;
+  --glass-dim-opacity: 0.04;
+}
+
+/* deactivate glass on mobile */
+@media (max-width: 48rem) {
+  .project-dossier__track {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-dossier__panel--previous,
+  .project-dossier__panel--next {
+    display: none;
+  }
+}
+
+.project-dossier__panel--previous,
+.project-dossier__panel--next {
+  position: relative;
+  isolation: isolate;
+}
+
+.project-dossier__panel--previous::before,
+.project-dossier__panel--next::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: rgb(5 14 23 / var(--glass-dim-opacity));
+
+  pointer-events: none;
 }
