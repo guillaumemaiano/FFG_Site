@@ -1377,9 +1377,7 @@ a:hover {
 
   display: grid;
   align-items: end;
-
-  height: calc(100svh - var(--site-header-height));
-
+  height: var(--project-hero-height);
   overflow: hidden;
 }
 
