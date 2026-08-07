@@ -136,7 +136,9 @@ IMAGE TREATMENT
 
   --content-width: 72rem;
   --article-width: 44rem;
-  --project-hero-height: 88svh;
+  --site-header-height: 3.3125rem;
+  --project-hero-height:
+  calc((100svh - var(--site-header-height)) * 0.95);
 
   /* ========================================
      BORDERS AND RADII
@@ -175,14 +177,23 @@ IMAGE TREATMENT
 /* Medium */
 @media (max-width: 64rem) {
   :root {
-    --project-hero-height: 82svh;
+    --site-header-height: 5.125rem;
+    --project-hero-height:
+      calc((100svh - var(--site-header-height)) * 0.80);
   }
 }
 
 /* Mobile */
 @media (max-width: 48rem) {
   :root {
-    --project-hero-height: 78svh;
+    --project-hero-height:
+      calc(100svh - var(--site-header-height));
+  }
+}
+/* Compact mobile */
+@media (max-width: 30rem) {
+  :root {
+    --site-header-height: 4.375rem;
   }
 }
 
