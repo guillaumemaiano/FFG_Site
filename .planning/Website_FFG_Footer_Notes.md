@@ -12,12 +12,6 @@ Flying Fortress Games
 
 Elegance in design. Engineering in every detail.
 
-Projects
-Devlog
-Blog
-About
-Contact
-
 GitHub
 YouTube
 RSS
