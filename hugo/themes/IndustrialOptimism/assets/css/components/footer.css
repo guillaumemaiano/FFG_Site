@@ -128,3 +128,45 @@
   font-family: var(--font-code);
   font-size: var(--text-sm);
 }
+
+/* ========================================
+   RESPONSIVE LAYOUT
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 64rem) {
+  .site-footer__content {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-footer__identity {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__external {
+    grid-column: 1;
+  }
+
+  .site-footer__institutional {
+    grid-column: 2;
+  }
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  .site-footer__content {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-lg);
+  }
+
+  .site-footer__identity,
+  .site-footer__external,
+  .site-footer__institutional,
+  .site-footer__copyright {
+    grid-column: 1;
+  }
+
+  .site-footer__copyright {
+    margin-top: 0;
+  }
+}
