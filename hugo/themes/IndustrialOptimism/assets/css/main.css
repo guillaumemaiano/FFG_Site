@@ -234,63 +234,6 @@ a:hover {
 }
 
 /* ========================================
-   TEMPORARY FOOTER THEME
-   ======================================== */
-
-.site-footer {
-  background-color: var(--color-midnight-blue);
-  border-top: var(--border-width) solid var(--border-highlight);
-  color: var(--surface-page);
-}
-
-.site-footer-content {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: var(--space-lg);
-  padding-block: var(--space-lg);
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-.site-footer-brand {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.site-footer-tagline {
-  color: var(--accent-primary);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-style: italic;
-  text-align: center;
-}
-
-.site-footer-copyright {
-  color: color-mix(in srgb,
-      var(--surface-page) 70%,
-      transparent);
-  font-size: var(--text-sm);
-  text-align: right;
-}
-
-@media (max-width: 48rem) {
-  .site-footer-content {
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
-  }
-
-  .site-footer-tagline,
-  .site-footer-copyright {
-    text-align: left;
-  }
-}
-
-/* ========================================
    JOURNAL ARTICLE — Single Post Layout
    French Industrial Art Deco
    ======================================== */
