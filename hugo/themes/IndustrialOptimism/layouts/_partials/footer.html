@@ -1,11 +1,59 @@
 <div class="site-frame site-footer__content">
-  <p class="site-footer__brand">{{ site.Title }}</p>
 
-  <p class="site-footer__tagline">
-    Elegance in design. Engineering in every detail.
-  </p>
+  <div class="site-footer__identity">
+    <p class="site-footer__brand">{{ site.Title }}</p>
+
+    <p class="site-footer__tagline">
+      Elegance in design. Engineering in every detail.
+    </p>
+  </div>
+
+
+  <nav class="site-footer__external" aria-label="External links">
+    <ul>
+      <li>
+        <a href="{{ site.Params.github_url }}" aria-label="GitHub">
+          {{ partial "icons/github.svg" . }}
+          <span>GitHub</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{{ site.Params.youtube_channel_url }}" aria-label="YouTube">
+          {{ partial "icons/youtube.svg" . }}
+          <span>YouTube</span>
+        </a>
+      </li>
+
+      {{ with site.Home.OutputFormats.Get "RSS" }}
+      <li>
+        <a href="{{ .RelPermalink }}" aria-label="RSS feed">
+          {{ partial "icons/rss.svg" $ }}
+          <span>RSS</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+<nav class="site-footer__institutional" aria-label="Institutional links">
+  <ul>
+    {{ with site.GetPage "/social-media" }}
+    <li><a href="{{ .RelPermalink }}">Publishing & Social Media</a></li>
+    {{ end }}
+
+    {{ with site.GetPage "/privacy" }}
+    <li><a href="{{ .RelPermalink }}">Privacy</a></li>
+    {{ end }}
+
+    {{ with site.GetPage "/licensing" }}
+    <li><a href="{{ .RelPermalink }}">Licensing</a></li>
+    {{ end }}
+  </ul>
+</nav>
 
   <p class="site-footer__copyright">
     © {{ now.Year }} {{ site.Title }}
   </p>
+
 </div>
