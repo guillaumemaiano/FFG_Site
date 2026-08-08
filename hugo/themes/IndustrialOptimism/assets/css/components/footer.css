@@ -10,6 +10,30 @@
   min-width: 0;
 }
 
+.site-footer__brand,
+.site-footer__tagline,
+.site-footer__copyright {
+  margin: 0;
+}
+
+.site-footer__brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.site-footer__tagline {
+  margin-top: var(--space-xs);
+
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
 .site-footer__copyright {
   grid-column: 1 / -1;
+
+  color: var(--text-muted);
+  font-size: var(--text-sm);
 }
