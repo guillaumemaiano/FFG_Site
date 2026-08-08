@@ -8,11 +8,33 @@
     </p>
   </div>
 
-  <div class="site-footer__external">
-    GitHub
-    YouTube
-    RSS
-  </div>
+
+  <nav class="site-footer__external" aria-label="External links">
+    <ul>
+      <li>
+        <a href="{{ site.Params.github_url }}" aria-label="GitHub">
+          {{ partial "icons/github.svg" . }}
+          <span>GitHub</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{{ site.Params.youtube_channel_url }}" aria-label="YouTube">
+          {{ partial "icons/youtube.svg" . }}
+          <span>YouTube</span>
+        </a>
+      </li>
+
+      {{ with site.Home.OutputFormats.Get "RSS" }}
+      <li>
+        <a href="{{ .RelPermalink }}" aria-label="RSS feed">
+          {{ partial "icons/rss.svg" $ }}
+          <span>RSS</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 
   <div class="site-footer__institutional">
     Publishing & Social Media
