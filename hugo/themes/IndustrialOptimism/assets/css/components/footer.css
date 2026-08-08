@@ -78,7 +78,8 @@
 .site-footer__external ul,
 .site-footer__institutional ul {
   display: flex;
-  gap: var(--space-md);
+  flex-direction: column;
+  gap: var(--space-xs);
   margin: 0;
   padding: 0;
   list-style: none;
