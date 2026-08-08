@@ -6,6 +6,7 @@ theme = 'IndustrialOptimism'
 
 [params]
 youtube_channel_url = "https://www.youtube.com/channel/UCUmA6UM0ePoChw0iGA9eDRg"
+github_url = "https://github.com/guillaumemaiano/FFG_Site"
 
 defaultContentLanguage = 'en'
 

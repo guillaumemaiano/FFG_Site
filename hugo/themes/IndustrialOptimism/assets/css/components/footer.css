@@ -56,3 +56,11 @@
   height: 1rem;
   fill: currentColor;
 }
+
+.site-footer__institutional ul {
+  display: flex;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

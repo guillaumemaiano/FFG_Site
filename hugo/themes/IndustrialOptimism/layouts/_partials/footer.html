@@ -36,11 +36,21 @@
     </ul>
   </nav>
 
-  <div class="site-footer__institutional">
-    Publishing & Social Media
-    Privacy
-    Licensing
-  </div>
+<nav class="site-footer__institutional" aria-label="Institutional links">
+  <ul>
+    {{ with site.GetPage "/social-media" }}
+    <li><a href="{{ .RelPermalink }}">Publishing & Social Media</a></li>
+    {{ end }}
+
+    {{ with site.GetPage "/privacy" }}
+    <li><a href="{{ .RelPermalink }}">Privacy</a></li>
+    {{ end }}
+
+    {{ with site.GetPage "/licensing" }}
+    <li><a href="{{ .RelPermalink }}">Licensing</a></li>
+    {{ end }}
+  </ul>
+</nav>
 
   <p class="site-footer__copyright">
     © {{ now.Year }} {{ site.Title }}
