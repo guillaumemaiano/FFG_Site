@@ -22,7 +22,8 @@
 .site-footer__content {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: var(--space-lg);
+  column-gap: var(--space-lg);
+  row-gap: var(--space-md);
   align-items: start;
   padding-block: var(--space-lg);
 }
@@ -60,19 +61,9 @@
 
 .site-footer__external,
 .site-footer__institutional {
-  font-size: var(--text-sm);
-}
-
-.site-footer__external {
   color: var(--surface-page);
-}
-
-.site-footer__institutional {
-  color: color-mix(
-    in srgb,
-    var(--surface-page) 70%,
-    transparent
-  );
+  font-size: var(--text-sm);
+  line-height: 1.5rem;
 }
 
 .site-footer__external ul,
@@ -80,25 +71,38 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+
   margin: 0;
   padding: 0;
-  list-style: none;
-}
 
-.site-footer__external a {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
+  list-style: none;
 }
 
 .site-footer__external a,
 .site-footer__institutional a {
+  display: flex;
+  align-items: center;
+
+  height: 1.5rem;
+
   color: inherit;
 }
 
+.site-footer__external a {
+  gap: var(--space-xs);
+}
+
 .site-footer__external svg {
+  display: block;
+  flex: 0 0 auto;
+
   width: 1rem;
   height: 1rem;
+}
+
+/* GitHub and YouTube are filled icons.
+   RSS explicitly uses fill="none" and stroke="currentColor". */
+.site-footer__external svg:not([fill="none"]) {
   fill: currentColor;
 }
 
