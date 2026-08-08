@@ -1403,7 +1403,15 @@ a:hover {
   outline-offset: 4px;
 }
 
-.projects-carousel__indicator:hover,
+.projects-carousel__indicator:hover {
+  background:
+    color-mix(
+      in srgb,
+      var(--indicator-theme-color) 68%,
+      transparent
+    );
+}
+
 .projects-carousel__indicator:focus-visible {
   background: rgb(255 255 255 / 0.55);
   /* fallback */
@@ -1811,14 +1819,6 @@ a:hover {
   transition:
     background-color var(--ease-out),
     box-shadow var(--ease-out);
-}
-
-.projects-carousel__indicator:hover {
-
-  background:
-    color-mix(in srgb,
-      var(--indicator-theme-color) 68%,
-      transparent);
 }
 
 /* Side-glass content */
