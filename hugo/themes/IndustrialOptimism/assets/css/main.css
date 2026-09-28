@@ -346,6 +346,10 @@ a:hover {
   margin: 0;
 }
 
+.journal-content blockquote p + p {
+  margin-top: var(--space-md);
+}
+
 /* Images — Framed Like Blueprints */
 .journal-content img {
   max-width: 100%;
