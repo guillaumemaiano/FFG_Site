@@ -1,11 +1,11 @@
 ---
 title: "La Beaumont"
-date: 2026-07-09
+date: 2026-10-29
 journal_number: 11
 draft: false
 description: "An airship, a financial crash, two centuries of business history, and a coffee machine."
 tags: ["vlog"]
-featured_image: "images/journal/beaumont-rooftop-pipework-watercolor"
+featured_image: "images/journal/beaumont-airship-WIP.png"
 youtube_id: "PLACEHOLDER"
 ---
 
@@ -20,7 +20,7 @@ No. Let's try that again.
 
 
 > The third flash came from the Beaumont mast.
-> 
+>  
 > From the gondola, New York had flattened into roofs, water and piers. Ahead, the building kept growing: pale stone, steel, rooftop pipework, and the great **B** cut across its face. The pilot eased the engines back and let the ship bleed away the last of its speed.
 > 
 > The first hauling line reached the roof and snapped taut hard enough to send a tremor through the frame. A second followed. The winches took over, drawing the airship sideways by degrees, against its own enormous inertia, until the gap between gondola and building narrowed to a few yards.
@@ -32,7 +32,7 @@ No. Let's try that again.
 
 
 {{< image
-  src="images/journal/beaumont-airship-mooring-watercolor"
+  src="images/journal/beaumont-airship-mooring-watercolor.png"
   alt="Watercolor concept art of the Beaumont complex in New York, with a vast airship above the waterfront"
   class="journal-image"
 >}}
@@ -311,7 +311,7 @@ Which brings me, naturally, to a coffee machine.
 
 
 {{< image
-  src="images/journal/beaumont-coffee-machine-pipe-reference"
+  src="images/journal/beaumont-coffee-machine-pipe-reference.png"
   alt="Reference photograph of a professional coffee machine, showing curved pipework, fittings and grime"
   class="journal-image"
 >}}
@@ -319,7 +319,7 @@ Which brings me, naturally, to a coffee machine.
 
 
 {{< image
-  src="images/journal/beaumont-coffee-machine-gauge-reference"
+  src="images/journal/beaumont-coffee-machine-gauge-reference.png"
   alt="Reference photograph of a professional coffee machine, showing brushed metal, reflections and a pressure gauge"
   class="journal-image"
 >}}
@@ -346,20 +346,14 @@ A machine in service never looks like the manufacturer's photograph for very lon
 
 
 
-That is what I needed.
+That is what I needed. (No. Not the coffee machine itself...)
 
-
-
-Not the coffee machine itself.
-
-
-
-The evidence of work.
+*The evidence of work.*
 
 
 
 {{< image
-  src="images/journal/beaumont-rooftop-pipework-watercolor"
+  src="images/journal/beaumont-rooftop-pipework-watercolor.png"
   alt="Watercolor concept art of the Beaumont building from another angle, showing the monumental B and rooftop pipework"
   class="journal-image"
 >}}
@@ -370,75 +364,38 @@ The pipes on top of the Beaumont building are obviously not copied from a coffee
 
 
 
-But the observation travels.
+But the observation serves.
+The uneven reflections transfer.
+The grime around the joints apply.
+The difference between exposed metal and protected metal is reusable.
 
+The sense that liquid or gas has passed through a pipe thousands of times travels.
 
+### Lesson
 
-The uneven reflections travel.
-
-
-
-The grime around the joins travels.
-
-
-
-The difference between exposed metal and protected metal travels.
-
-
-
-The sense that liquid has passed through a pipe thousands of times travels.
-
-
-
-Reference is much more useful once it stops being something to copy.
+> Reference is much more useful once it stops being something to copy.
 
 
 
 ## **Two views of the same machine**
 
-
-
 The two watercolours show the same Beaumont complex from different angles.
-
-
-
-
-
-
 
 The wider view establishes its place in the city: the water, the docks, the airship, the monumental scale of the building and the machinery around it.
 
-
-
 The other view brings us closer. More of the architectural **B** becomes visible, and the roof starts to matter: pipes, metalwork, gantries, the less ceremonial pieces that keep the monumental building alive.
-
-
 
 I like the contradiction.
 
-
-
 La Beaumont is old enough to have acquired grandeur, yet is also much too busy to become a museum.
-
-
 
 The building has been extended. Machinery has been replaced. Pipes have been rerouted. Stone has been cleaned and stained again. One company has swallowed another. A department has moved floors. Some unfortunate engineer has discovered that a valve installed thirty years ago is now behind a wall.
 
-
-
 Like the building, like men and women, institutions adapt or die. If they survive, it's because they adapted fast enough.
-
-
 
 That is the Beaumont I want on the page: not an immortal family sitting on an immortal fortune, but a very old machine that generations of people have kept running. When a leader signs a deal, they think of the bottom line and the tens of thousands of people who rely on no mistake being made. **Not on whether pundits care.**
 
-
-
 The names on the board will change, but our airship still needs somewhere to moor.
-
-
-
-
 
 [^airship-scale]: The scale is deliberate. The historical *Hindenburg* was about 245 metres long and contained roughly 200,000 m³ of lifting gas. Beaumont's great airships are a different class of machine: hundreds of metres long, helium-filled, and built around the fictional high-strength, low-mass titanium-based alloy **TOTANIUM® — Beaumont Metallurgical Company**. The helium is less fanciful than the structure: the United States had unusually large natural helium supplies and became the world's leading producer; American rigid airships such as the USS *Shenandoah* were already flying with helium in the 1920s.
 
@@ -456,26 +413,27 @@ A few of the sources behind the economic side of La Beaumont:
 
 
 
-\- Asli M. Colpan and Takashi Hikino, [*Diversified Business Groups in the West: History and Theory*]\(https\://www\.hbs.edu/ris/Publication%20Files/17-035_eb90f5d5-b645-4569-98f5-0b0b079fb5be.pdf), Harvard Business School Working Paper 17-035; subsequently published in revised form as “The Evolutionary Dynamics of Diversified Business Groups in the West: History and Theory,” in *Business Groups in the West* (Oxford University Press, 2018).
+- Asli M. Colpan and Takashi Hikino, [*Diversified Business Groups in the West: History and Theory*](https://www.hbs.edu/ris/Publication%20Files/17-035_eb90f5d5-b645-4569-98f5-0b0b079fb5be.pdf), Harvard Business School Working Paper 17-035; subsequently published in revised form as “The Evolutionary Dynamics of Diversified Business Groups in the West: History and Theory,” in *Business Groups in the West* (Oxford University Press, 2018).
 
-\- Harvard Business School, [*Railroads and the Transformation of Capitalism — Management*]\(https\://www\.library.hbs.edu/hc/railroads/management.html), on the development of managerial hierarchy in the railroad industry and its spread to other large organisations.
+- Harvard Business School, [*Railroads and the Transformation of Capitalism — Management*](https://www.library.hbs.edu/hc/railroads/management.html), on the development of managerial hierarchy in the railroad industry and its spread to other large organisations.
 
-\- Adolf A. Berle Jr. and Gardiner C. Means, *The Modern Corporation and Private Property* (1932); [Cambridge excerpt and bibliographic material]\(https\://www\.cambridge.org/core/books/abs/economic-nature-of-the-firm/from-the-modern-corporation-and-private-property/DB1F4E958AE19BC7C473ABB8628A15B6).
+- Adolf A. Berle Jr. and Gardiner C. Means, *The Modern Corporation and Private Property* (1932); [Cambridge excerpt and bibliographic material](https://www.cambridge.org/core/books/abs/economic-nature-of-the-firm/from-the-modern-corporation-and-private-property/DB1F4E958AE19BC7C473ABB8628A15B6).
 
-\- John R. Graham, Sonali Hazarika and Krishnamoorthy Narasimhan, [“Financial Distress in the Great Depression”]\(https\://www\.nber.org/papers/w17388), NBER Working Paper 17388.
+- John R. Graham, Sonali Hazarika and Krishnamoorthy Narasimhan, [“Financial Distress in the Great Depression”](https://www.nber.org/papers/w17388), NBER Working Paper 17388.
 
-\- Tania Babina, Diego Garcia and Geoff Tate, [“Friends during Hard Times: Evidence from the Great Depression”]\(https\://business.columbia.edu/faculty/research/friends-during-hard-times-evidence-great-depression), Columbia Business School.
+- Tania Babina, Diego Garcia and Geoff Tate, [“Friends during Hard Times: Evidence from the Great Depression”](https://business.columbia.edu/faculty/research/friends-during-hard-times-evidence-great-depression), Columbia Business School.
 
-\- Harvard Business School, Baker Library, [*Lehman Brothers: 1850–2008*]\(https\://www\.library.hbs.edu/special-collections-and-archives/exhibits/lehman/introduction).
+- Harvard Business School, Baker Library, [*Lehman Brothers: 1850–2008*](https://www.library.hbs.edu/special-collections-and-archives/exhibits/lehman/introduction).
 
-\- Gottfried Haberler, *Prosperity and Depression: A Theoretical Analysis of Cyclical Movements*, League of Nations, 1937.
+- Gottfried Haberler, *Prosperity and Depression: A Theoretical Analysis of Cyclical Movements*, League of Nations, 1937.
 
-\- François R. Velde, [“What We Learn from a Sovereign Debt Restructuring in France in 1721”]\(https\://www\.chicagofed.org/publications/economic-perspectives/2016/5-velde), Federal Reserve Bank of Chicago; and [“Government Equity and Money: John Law’s System in 1720 France”]\(https\://www\.chicagofed.org/publications/working-papers/2003/2003-31), for the mechanics and collapse of Law's system.
+- François R. Velde, [“What We Learn from a Sovereign Debt Restructuring in France in 1721”](https://www.chicagofed.org/publications/economic-perspectives/2016/5-velde), Federal Reserve Bank of Chicago; and [“Government Equity and Money: John Law’s System in 1720 France”](https://www.chicagofed.org/publications/working-papers/2003/2003-31), for the mechanics and collapse of Law's system.
 
-\- [John Law's Company]\(https\://en.wikipedia.org/wiki/John_Law%27s_Company), retained as an accessible overview of the Mississippi Bubble.
+- [John Law's Company](https://en.wikipedia.org/wiki/John_Law%27s_Company), retained as an accessible overview of the Mississippi Bubble.
 
-\- Zeppelin Museum Friedrichshafen, [LZ 129 *Hindenburg* technical data]\(https\://www\.zeppelin-museum.de/en/digital-offers/part-l-lz-129-hindenburgl), for the historical airship comparison.
+- Zeppelin Museum Friedrichshafen, [LZ 129 *Hindenburg* technical data](https://www.zeppelin-museum.de/en/digital-offers/part-l-lz-129-hindenburgl), for the historical airship comparison.
 
-\- Smithsonian National Air and Space Museum, [USS *Shenandoah*]\(https\://airandspace.si.edu/uss-shenandoah-accessibility-version), and Smithsonian National Museum of American History, [“Historic helium sample surfaces at Smithsonian”]\(https\://americanhistory.si.edu/explore/stories/historic-helium-sample-surfaces-smithsonian), for American helium and 1920s helium-filled rigid airships.
+- Smithsonian National Air and Space Museum, [USS *Shenandoah*](https://airandspace.si.edu/uss-shenandoah-accessibility-version), and Smithsonian National Museum of American History, [“Historic helium sample surfaces at Smithsonian”](https://americanhistory.si.edu/explore/stories/historic-helium-sample-surfaces-smithsonian), for American helium and 1920s helium-filled rigid airships.
 
-\- Warren Buffett, [Berkshire Hathaway 2023 shareholder letter]\(https\://www\.berkshirehathaway.com/letters/2023ltr.pdf), particularly the discussion of BNSF.
+- Warren Buffett, [Berkshire Hathaway 2023 shareholder letter](https://www.berkshirehathaway.com/letters/2023ltr.pdf), particularly the discussion of BNSF.
+
