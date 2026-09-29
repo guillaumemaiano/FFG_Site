@@ -6,7 +6,7 @@ draft: false
 description: "An airship, a financial crash, two centuries of business history, and a coffee machine."
 tags: ["vlog"]
 featured_image: "images/journal/beaumont-airship-WIP.png"
-youtube_id: "PLACEHOLDER"
+youtube_id: "4CPLEdFoIp4"
 ---
 
 
