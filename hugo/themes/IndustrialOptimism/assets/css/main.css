@@ -56,8 +56,6 @@ a:hover {
   object-fit: cover;
   object-position: center;
 
-  /* Enable after consistent results across 5–6 representative images. */
-  /* filter: var(--filter-cool); */
 }
 
 /* Desktop: Preserve studio name at top-left */
@@ -436,7 +434,7 @@ a:hover {
   border-bottom-style: solid;
 }
 
-/* Art Deco Corner Accents (Optional) */
+/* Art Deco Corner Accents */
 .journal-panel::before,
 .journal-panel::after {
   content: "";
@@ -479,7 +477,7 @@ a:hover {
 }
 
 /* ========================================
-   HOMEPAGE — Discussion Prototype
+   HOMEPAGE
    ======================================== */
 
 .home {
@@ -597,7 +595,7 @@ a:hover {
   color: var(--accent-primary);
 }
 
-/* Give the latest item greater visual importance. */
+/* Give the featured project greater visual importance. */
 .home-entry:first-child {
   padding-block: var(--space-2xl);
 }
@@ -686,12 +684,6 @@ a:hover {
 .site-brand__text>span {
   display: block;
   white-space: nowrap;
-}
-
-.site-brand__subtitle:hover {
-  margin-top: 0.25em;
-  font-size: 0.72em;
-  letter-spacing: 0.14em;
 }
 
 /* Art Deco corner accents */
@@ -881,7 +873,6 @@ a:hover {
   gap: var(--space-sm) clamp(var(--space-lg), 4vw, var(--space-xl));
 
   margin-bottom: 0;
-  /*clamp(var(--space-lg), 4vw, var(--space-xl));*/
   padding-bottom: var(--space-lg);
 
   border-bottom: var(--border-width) solid var(--document-rule);
@@ -1308,6 +1299,8 @@ a:hover {
 }
 
 .project {
+  --project-image-position: center;
+
   position: relative;
   isolation: isolate;
 
@@ -1530,7 +1523,7 @@ a:hover {
 
   color: var(--accent-primary);
 
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
   font-size: var(--text-sm);
   font-weight: 500;
   line-height: 1.4;
@@ -1542,7 +1535,7 @@ a:hover {
   max-width: 12ch;
   margin: 0;
 
-  color: var(--text-primary);
+  color: var(--text-main);
 
   font-family: var(--font-heading);
   font-size: clamp(3rem, 8vw, 7rem);
@@ -1562,7 +1555,7 @@ a:hover {
   border: 1px solid var(--accent-primary);
   color: var(--accent-primary);
 
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
   font-size: var(--text-sm);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1581,7 +1574,7 @@ a:hover {
   max-width: 42rem;
   margin: var(--space-xl) 0 0;
 
-  color: var(--text-secondary);
+  color: var(--text-muted);
 
   font-size: clamp(1.125rem, 2vw, 1.4rem);
   line-height: 1.65;
@@ -1612,7 +1605,7 @@ a:hover {
 
   border-top: 1px solid var(--project-theme-color);
   background: var(--surface-page);
-  color: var(--text-primary);
+  color: var(--text-main);
 }
 
 .project-dossier__viewport {
@@ -1666,14 +1659,8 @@ a:hover {
 /* ========================================
    PROJECT VERTICAL NAVIGATION
 
-   @BORIS:
-   This styling deliberately targets the CURRENT HTML:
-     .project__nav.project__nav--down
-     .project-dossier__nav-link
-
-   Before replacing these with a generic cue component, read the branch
-   commits and inspect both project.html and project-dossier.html.
-   Down and up are separate controls with different placement and symbol order.
+   The hero and dossier navigation controls intentionally remain distinct.
+   They have different placement, symbol order and animation direction.
    ======================================== */
 
 .project__nav--down,
