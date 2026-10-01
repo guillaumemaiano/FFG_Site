@@ -479,7 +479,7 @@ a:hover {
 }
 
 /* ========================================
-   HOMEPAGE — Discussion Prototype
+   HOMEPAGE
    ======================================== */
 
 .home {
@@ -688,12 +688,6 @@ a:hover {
   white-space: nowrap;
 }
 
-.site-brand__subtitle:hover {
-  margin-top: 0.25em;
-  font-size: 0.72em;
-  letter-spacing: 0.14em;
-}
-
 /* Art Deco corner accents */
 .site-header__corner {
   position: absolute;
@@ -881,7 +875,6 @@ a:hover {
   gap: var(--space-sm) clamp(var(--space-lg), 4vw, var(--space-xl));
 
   margin-bottom: 0;
-  /*clamp(var(--space-lg), 4vw, var(--space-xl));*/
   padding-bottom: var(--space-lg);
 
   border-bottom: var(--border-width) solid var(--document-rule);
