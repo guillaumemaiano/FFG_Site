@@ -56,8 +56,6 @@ a:hover {
   object-fit: cover;
   object-position: center;
 
-  /* Enable after consistent results across 5–6 representative images. */
-  /* filter: var(--filter-cool); */
 }
 
 /* Desktop: Preserve studio name at top-left */
@@ -436,7 +434,7 @@ a:hover {
   border-bottom-style: solid;
 }
 
-/* Art Deco Corner Accents (Optional) */
+/* Art Deco Corner Accents */
 .journal-panel::before,
 .journal-panel::after {
   content: "";
@@ -597,7 +595,7 @@ a:hover {
   color: var(--accent-primary);
 }
 
-/* Give the latest item greater visual importance. */
+/* Give the featured project greater visual importance. */
 .home-entry:first-child {
   padding-block: var(--space-2xl);
 }
