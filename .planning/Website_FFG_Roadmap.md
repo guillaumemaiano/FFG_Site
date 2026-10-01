@@ -1,10 +1,166 @@
-# Flying Fortress Games Website Roadmap (Version 0.1)
+# Flying Fortress Games Website Roadmap (Version 0.2)
 
 ## Purpose
 
 This document defines the implementation roadmap for the first version of the Flying Fortress Games website.
 
 The objective is to establish a complete, reusable design system and implement a functional website based upon it.
+
+---
+
+# Engineering Status — 2026-10-01
+
+This section records the current implementation state.
+
+The original roadmap below is retained as the historical implementation plan. It should not be retroactively rewritten merely because the implementation has evolved.
+
+## Current Baseline
+
+The website is now substantially beyond the initial foundation stage.
+
+The current implementation uses:
+
+- Hugo `0.164.0`;
+- GitHub Pages deployment through GitHub Actions;
+- Tailwind CSS `4.3.2`;
+- Hugo's `css.TailwindCSS` processing pipeline;
+- the `IndustrialOptimism` Hugo theme;
+- semantic Hugo templates backed primarily by custom CSS classes and CSS custom properties.
+
+Tailwind is operational in the build pipeline, but the site is **not currently authored as a utility-first Tailwind application**.
+
+There is presently no established:
+
+- `@theme` integration layer;
+- `@apply` component architecture;
+- significant use of Tailwind utility classes in templates.
+
+This distinction is intentional to preserve the design system independently of any particular CSS framework.
+
+## Design System State
+
+The design-token system has grown substantially beyond the original palette and spacing definitions.
+
+`tokens.css` currently acts as the framework-neutral source of truth for:
+
+- raw color palettes;
+- website semantic colors;
+- engineering-document semantic colors;
+- border roles;
+- typography families;
+- document typography roles;
+- project typography roles;
+- type scale;
+- spacing scale;
+- layout dimensions;
+- header and project geometry;
+- border widths and radii;
+- elevation;
+- image treatments;
+- interaction timing and motion.
+
+Components and page layouts consume these semantic values rather than defining their own design language.
+
+This remains consistent with the original principle:
+
+> Tokens capture semantic intent, not implementation.
+
+## Implemented Site Surfaces
+
+The implementation currently includes, among other work:
+
+- persistent site header and navigation;
+- site footer and external/institutional links;
+- responsive behavior across the principal layouts;
+- journal article presentation;
+- engineering-style devlog index;
+- RSS integration;
+- project presentation;
+- project hero and dossier layouts;
+- project carousel and lateral navigation;
+- project-specific visual tones and theme colors;
+- responsive project navigation;
+- homepage selection of featured project content and recent journal content;
+- Art Deco framing and visual accents;
+- local font assets and semantic typography roles.
+
+The implementation has therefore moved beyond the original linear sequence of the roadmap. Several later-phase concerns were developed while earlier elements were still being refined.
+
+## Current Technical Assessment
+
+The framework-neutral token architecture has proven useful and should be preserved.
+
+Tailwind should therefore be treated as a **consumer of the Flying Fortress Games design system**, not as the owner of that system.
+
+The existing CSS custom properties remain the canonical design vocabulary.
+
+A future Tailwind integration may expose selected primitives or roles where doing so provides concrete value, but migration to Tailwind syntax is not itself an objective.
+
+## Immediate Engineering Priorities
+
+### 1. Debris Cleanup
+
+Perform a behavior-neutral cleanup pass.
+
+Review and remove only demonstrably obsolete or duplicated material, including:
+
+- duplicated token definitions;
+- temporary experimentation comments;
+- redundant declarations;
+- obsolete prototype styling;
+- unused selectors or variables after usage verification;
+- development documentation that no longer reflects the actual build pipeline.
+
+No visual redesign should be combined with this pass.
+
+### 2. Tailwind Strategy Documentation
+
+Update the technical/design documentation to define the intended relationship between:
+
+- Flying Fortress Games design tokens;
+- semantic CSS;
+- Tailwind CSS;
+- Hugo templates.
+
+The central architectural principle shall be:
+
+> The FFG design system remains framework-neutral. Tailwind may consume it where useful.
+
+### 3. Tailwind Preparation
+
+After the strategy has been documented, perform a compatibility cleanup before introducing broader Tailwind usage.
+
+Particular attention is required for token namespaces which overlap with Tailwind theme namespaces, including:
+
+- `--text-*`;
+- `--radius-*`;
+- `--ease-*`.
+
+Existing tokens must not be mechanically converted. Naming and meaning should be reconciled deliberately so that future Tailwind integration cannot silently change existing semantics.
+
+### 4. Controlled Tailwind Adoption
+
+Only after the cleanup and preparation work should Tailwind utilities or theme integration be introduced more broadly.
+
+Adoption should be incremental and justified by demonstrated benefit.
+
+Semantic templates and specialized visual CSS should remain valid where they express the design more clearly than utility composition.
+
+Large-scale conversion of existing working CSS is explicitly not a goal.
+
+## Maintenance Direction
+
+`main.css` has grown considerably as the site matured.
+
+Further decomposition should happen only where stable component or page boundaries have emerged.
+
+The project should continue to prefer:
+
+1. semantic intent;
+2. stable design tokens;
+3. readable templates;
+4. evidence-driven abstraction;
+5. minimal framework coupling.
 
 ---
 
