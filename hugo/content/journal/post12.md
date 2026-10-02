@@ -2,7 +2,7 @@
 
 title: "Ireland"
 
-date: 2026-10-02
+date: 2026-11-15
 
 journal_number: 12
 
@@ -41,7 +41,7 @@ Those rocks began forming something like 320 million years ago.[^moher]
   class="journal-image"
 >}}
 
-We went to Ireland six weeks ago for this sort of thing.
+We went to Ireland this summer for this sort of thing.
 
 *The Beaumont Legacy* takes place in 1932, but almost nothing in its world was made in 1932.
 
