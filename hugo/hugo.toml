@@ -44,3 +44,17 @@ weight = 30
 name = 'CONTACT'
 pageRef = '/contact'
 weight = 40
+
+
+# Security
+
+[security]
+  [security.exec]
+    allow = [
+      '^(dart-)?sass$',
+      '^go$',
+      '^git$',
+      '^node$',
+      '^postcss$',
+      '^tailwindcss$',
+    ]
